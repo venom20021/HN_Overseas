@@ -112,7 +112,47 @@ a{color:inherit}
 }
 #minihead nav a:hover,#minihead nav a:focus-visible{color:var(--ivory)}
 #minihead nav a:hover::after,#minihead nav a:focus-visible::after{transform:scaleX(1);transform-origin:left}
-@media(max-width:760px){#minihead nav a:not(.mh-cta){display:none}}
+@media(max-width:760px){#minihead nav{display:none}}
+
+/* ---------- Mobile menu (hamburger) ---------- */
+.menu-btn{
+  display:none;width:46px;height:46px;flex:none;
+  border:1px solid var(--line-navy);border-radius:2px;background:transparent;
+  cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--ivory)}
+#mobileMenu{
+  position:fixed;inset:0;z-index:110;background:var(--navy);color:var(--ivory);
+  display:flex;flex-direction:column;padding:22px var(--gutter) 30px;overflow-y:auto;
+  transform:translateY(-103%);visibility:hidden;
+  transition:transform .55s cubic-bezier(.16,1,.3,1),visibility 0s .55s;
+}
+#mobileMenu.open{transform:translateY(0);visibility:visible;transition:transform .55s cubic-bezier(.16,1,.3,1)}
+.mm-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mm-brand{font-family:var(--serif);font-weight:700;font-size:1.3rem;letter-spacing:-.02em}
+.mm-brand em{font-style:normal;color:var(--brass-light)}
+.mm-close{
+  width:46px;height:46px;flex:none;border:1px solid var(--line-navy);border-radius:2px;
+  background:transparent;color:var(--ivory);font-size:1.3rem;line-height:1;cursor:pointer;
+}
+.mm-nav{display:flex;flex-direction:column;margin-top:4vh}
+.mm-nav a{
+  font-family:var(--serif);font-weight:500;letter-spacing:-.02em;line-height:1.1;
+  font-size:clamp(2rem,9vw,2.9rem);color:var(--ivory);text-decoration:none;
+  padding:14px 0;border-bottom:1px solid var(--line-navy);
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;min-height:44px;
+}
+.mm-nav a .mm-idx{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--brass-light)}
+.mm-nav a:active{color:var(--brass-light)}
+.mm-cta{margin-top:auto;align-self:flex-start}
+.mm-foot{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-navy);margin-top:22px;line-height:1.9}
+@media(max-width:760px){
+  .hero-top .hero-nav{display:none}
+  #minihead nav{display:none}
+  .menu-btn{display:inline-flex}
+  .hero-top{align-items:center}
+}
+@media(min-width:761px){#mobileMenu{display:none}}
 
 /* ---------- Buttons ---------- */
 .btn{
@@ -395,29 +435,41 @@ h1 .accent{color:var(--brass-light)}
 }
 
 /* ---------- Yearly intakes overview ---------- */
-.intakes-overview{background:var(--navy);color:var(--ivory);border-top:1px solid var(--line-navy);padding:clamp(56px,8vh,90px) 0 clamp(70px,10vh,110px)}
-.intakes-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
-  background:var(--line-navy);border:1px solid var(--line-navy);margin-top:36px;
+.intakes-overview{background:var(--navy);color:var(--ivory);border-top:1px solid var(--line-navy);padding:clamp(48px,7vh,72px) 0 clamp(60px,9vh,96px)}
+.intakes-lede{color:var(--muted-navy);max-width:58ch;margin-top:18px}
+.intake-panel{border:1px solid var(--line-navy);margin-top:32px;max-width:880px}
+.ip-head{
+  display:flex;flex-wrap:wrap;gap:6px 22px;align-items:baseline;
+  padding:20px 24px;border-bottom:1px solid var(--line-navy);
 }
-.intake-card{
-  background:var(--navy);color:var(--ivory);text-align:left;cursor:pointer;
-  padding:24px;border:0;border-radius:0;font-family:var(--sans);width:100%;
-  transition:background .3s cubic-bezier(.16,1,.3,1);
+.ip-country{font-family:var(--serif);font-weight:500;font-size:1.7rem;letter-spacing:-.02em;line-height:1.05}
+.ip-meta{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-light)}
+.ip-row{
+  display:block;width:100%;text-align:left;cursor:pointer;background:transparent;border:0;
+  border-bottom:1px solid var(--line-navy);color:var(--ivory);font-family:var(--sans);
+  padding:18px 24px;transition:background .3s cubic-bezier(.16,1,.3,1);
 }
-.intake-card:hover,.intake-card:focus-visible{background:rgba(176,138,62,.14)}
-.intake-card .ic-country{font-family:var(--serif);font-weight:500;font-size:1.55rem;letter-spacing:-.02em;line-height:1.05}
-.intake-card .ic-count{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-light);margin-top:6px}
-.intake-card .ic-list{list-style:none;margin-top:16px}
-.intake-card .ic-list li{
-  display:flex;justify-content:space-between;gap:14px;align-items:baseline;
-  padding:8px 0;border-top:1px solid var(--line-navy);font-size:.92rem;
+.ip-row:last-of-type{border-bottom:0}
+.ip-row:hover,.ip-row:focus-visible{background:rgba(176,138,62,.12)}
+.ip-row.is-on{background:rgba(176,138,62,.16)}
+.ip-line{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+.ip-name{font-family:var(--serif);font-weight:500;font-size:1.35rem;letter-spacing:-.01em}
+.ip-when{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;color:var(--muted-navy)}
+.ip-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-light);margin-left:auto}
+.ip-pick{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-navy)}
+.ip-row.is-on .ip-pick{color:var(--brass-light)}
+.ip-apply{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--brass-light);margin-top:9px}
+.ip-note{display:block;font-size:.92rem;line-height:1.55;color:var(--muted-navy);margin-top:6px;max-width:68ch}
+.ip-foot{
+  display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between;
+  padding:10px 24px;border-top:1px solid var(--line-navy);
+  font-size:.88rem;color:var(--muted-navy);
 }
-.intake-card .ic-list .ic-when{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--muted-navy);white-space:nowrap}
-.intake-card .ic-list .ic-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-light);white-space:nowrap}
-.intake-card .ic-go{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-light);margin-top:16px}
-@media(max-width:900px){.intakes-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.intakes-grid{grid-template-columns:1fr}}
+.ip-change{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brass-light);background:none;border:0;cursor:pointer;padding:10px 0;min-height:44px;
+}
+.ip-change:hover,.ip-change:focus-visible{text-decoration:underline;text-underline-offset:3px}
 
 /* ---------- Spotlight (Page 06, every country) ---------- */
 .spot-controls{margin-top:30px}
@@ -628,8 +680,26 @@ footer{background:var(--navy);color:var(--ivory);padding:clamp(70px,10vh,120px) 
       <a href="#stories" tabindex="-1">Stories</a>
       <a class="mh-cta" href="#contact" tabindex="-1">Book free counselling</a>
     </nav>
+    <button type="button" class="menu-btn" data-menu-open tabindex="-1" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </div>
 </header>
+
+<div id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+  <div class="mm-top">
+    <span class="mm-brand">HN <em>Overseas</em></span>
+    <button type="button" class="mm-close" id="mmClose" aria-label="Close menu">×</button>
+  </div>
+  <nav class="mm-nav" aria-label="Mobile">
+    <a href="#destinations">Destinations <span class="mm-idx">04</span></a>
+    <a href="#journey">Journey <span class="mm-idx">05</span></a>
+    <a href="#italy">Spotlight <span class="mm-idx">06</span></a>
+    <a href="#stories">Stories <span class="mm-idx">07</span></a>
+    <a href="#mentor">Mentor <span class="mm-idx">08</span></a>
+    <a href="#contact">Contact <span class="mm-idx">10</span></a>
+  </nav>
+  <a class="btn solid mm-cta" href="#contact"><span class="fill"></span>Book free counselling <span class="arr">→</span></a>
+  <p class="mm-foot">Lucknow · Since 1985<br>Zero consultation fees</p>
+</div>
 
 <main id="main">
 <!-- ================= HERO ================= -->
@@ -645,6 +715,7 @@ footer{background:var(--navy);color:var(--ivory);padding:clamp(70px,10vh,120px) 
         <a href="#mentor">Mentor</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button type="button" class="menu-btn" data-menu-open aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
 
     <div class="hero-mid">
@@ -836,86 +907,24 @@ footer{background:var(--navy);color:var(--ivory);padding:clamp(70px,10vh,120px) 
 <div class="intakes-overview on-navy" id="intakes">
     <div class="wrap">
       <p class="page-tag">Page 05 · Yearly intakes</p>
-      <h2 class="sec-head">Every country.<br><span class="accent">Every intake it offers.</span></h2>
-      <p style="color:var(--muted-navy);max-width:58ch;margin-top:18px">Universities abroad do not all start in the same month. Pick a country to load its intakes into the route above, then choose the intake you want to aim for — the counselling plan, test dates and application deadlines are all counted back from it.</p>
-      <div class="intakes-grid">
-        <button type="button" class="intake-card" data-intake-country="usa">
-          <span class="ic-country">USA</span><span class="ic-count" style="display:block">3 intakes a year</span>
-          <ul class="ic-list">
-            <li><span>Fall</span><span class="ic-when">Aug – Sep</span><span class="ic-tag">Main</span></li>
-            <li><span>Spring</span><span class="ic-when">Jan</span><span class="ic-tag">Second</span></li>
-            <li><span>Summer</span><span class="ic-when">May</span><span class="ic-tag">Limited</span></li>
-          </ul>
-          <span class="ic-go" style="display:block">Choose USA intake →</span>
-        </button>
-        <button type="button" class="intake-card" data-intake-country="uk">
-          <span class="ic-country">UK</span><span class="ic-count" style="display:block">Up to 3 intakes a year</span>
-          <ul class="ic-list">
-            <li><span>September</span><span class="ic-when">Sep</span><span class="ic-tag">Main</span></li>
-            <li><span>January</span><span class="ic-when">Jan</span><span class="ic-tag">Second</span></li>
-            <li><span>May</span><span class="ic-when">May</span><span class="ic-tag">PG only</span></li>
-          </ul>
-          <span class="ic-go" style="display:block">Choose UK intake →</span>
-        </button>
-        <button type="button" class="intake-card" data-intake-country="canada">
-          <span class="ic-country">Canada</span><span class="ic-count" style="display:block">3 intakes a year</span>
-          <ul class="ic-list">
-            <li><span>Fall</span><span class="ic-when">Sep</span><span class="ic-tag">Main</span></li>
-            <li><span>Winter</span><span class="ic-when">Jan</span><span class="ic-tag">Second</span></li>
-            <li><span>Spring</span><span class="ic-when">May</span><span class="ic-tag">Limited</span></li>
-          </ul>
-          <span class="ic-go" style="display:block">Choose Canada intake →</span>
-        </button>
-        <button type="button" class="intake-card" data-intake-country="australia">
-          <span class="ic-country">Australia</span><span class="ic-count" style="display:block">3 intakes a year</span>
-          <ul class="ic-list">
-            <li><span>Semester 1</span><span class="ic-when">Feb</span><span class="ic-tag">Main</span></li>
-            <li><span>Semester 2</span><span class="ic-when">Jul</span><span class="ic-tag">Main</span></li>
-            <li><span>Trimester 3</span><span class="ic-when">Nov</span><span class="ic-tag">Limited</span></li>
-          </ul>
-          <span class="ic-go" style="display:block">Choose Australia intake →</span>
-        </button>
-        <button type="button" class="intake-card" data-intake-country="ireland">
-          <span class="ic-country">Ireland</span><span class="ic-count" style="display:block">2 intakes a year</span>
-          <ul class="ic-list">
-            <li><span>September</span><span class="ic-when">Sep</span><span class="ic-tag">Main</span></li>
-            <li><span>January</span><span class="ic-when">Jan</span><span class="ic-tag">PG only</span></li>
-          </ul>
-          <span class="ic-go" style="display:block">Choose Ireland intake →</span>
-        </button>
-        <button type="button" class="intake-card" data-intake-country="uae">
-          <span class="ic-country">UAE</span><span class="ic-count" style="display:block">3 intakes a year</span>
-          <ul class="ic-list">
-            <li><span>Fall</span><span class="ic-when">Sep</span><span class="ic-tag">Main</span></li>
-            <li><span>Spring</span><span class="ic-when">Jan</span><span class="ic-tag">Second</span></li>
-            <li><span>Summer</span><span class="ic-when">May</span><span class="ic-tag">Limited</span></li>
-          </ul>
-          <span class="ic-go" style="display:block">Choose UAE intake →</span>
-        </button>
-        <button type="button" class="intake-card" data-intake-country="nz">
-          <span class="ic-country">New Zealand</span><span class="ic-count" style="display:block">3 intakes a year</span>
-          <ul class="ic-list">
-            <li><span>Semester 1</span><span class="ic-when">Feb</span><span class="ic-tag">Main</span></li>
-            <li><span>Semester 2</span><span class="ic-when">Jul</span><span class="ic-tag">Second</span></li>
-            <li><span>Summer</span><span class="ic-when">Nov</span><span class="ic-tag">Limited</span></li>
-          </ul>
-          <span class="ic-go" style="display:block">Choose NZ intake →</span>
-        </button>
-        <button type="button" class="intake-card" data-intake-country="singapore">
-          <span class="ic-country">Singapore</span><span class="ic-count" style="display:block">2 intakes a year</span>
-          <ul class="ic-list">
-            <li><span>August</span><span class="ic-when">Aug</span><span class="ic-tag">Main</span></li>
-            <li><span>January</span><span class="ic-when">Jan</span><span class="ic-tag">Second</span></li>
-          </ul>
-          <span class="ic-go" style="display:block">Choose Singapore intake →</span>
-        </button>
-        <button type="button" class="intake-card" data-intake-country="italy">
-          <span class="ic-country">Italy</span><span class="ic-count" style="display:block">1 intake a year</span>
-          <ul class="ic-list">
-            <li><span>September</span><span class="ic-when">Sep</span><span class="ic-tag">Only intake</span></li>
-          </ul>
-          <span class="ic-go" style="display:block">Choose Italy intake →</span>
-        </button>
+      <h2 class="sec-head">The <span id="ipCountryHead">Italy</span> calendar.<br><span class="accent">Choose your start.</span></h2>
+      <p class="intakes-lede">Universities abroad do not all start in the same month — but only the country you selected in the route above is listed here. Tap an intake to make it yours; the counselling plan, test dates and application deadlines are all counted back from it.</p>
+      <div class="intake-panel">
+        <div class="ip-head">
+          <span class="ip-country" id="ipCountry">Italy</span>
+          <span class="ip-meta" id="ipMeta">1 intake a year · Postgraduate</span>
+        </div>
+        <div id="ipRows">
+          <button type="button" class="ip-row is-on" aria-pressed="true">
+            <span class="ip-line"><span class="ip-name">September</span><span class="ip-when">Starts Sep 2027</span><span class="ip-tag">Only intake</span><span class="ip-pick">Your intake</span></span>
+            <span class="ip-apply">Apply by: Dec – Jul, via Universitaly pre-enrolment</span>
+            <span class="ip-note">Italy runs one single yearly intake at its public universities. Miss September and the next start is a full year away — which is why the Italy file opens early.</span>
+          </button>
+        </div>
+        <div class="ip-foot">
+          <span>Showing only the country selected above.</span>
+          <button type="button" class="ip-change" id="ipChange">Change destination ↑</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1275,6 +1284,44 @@ footer{background:var(--navy);color:var(--ivory);padding:clamp(70px,10vh,120px) 
       document.getElementById("idIntakeApply").textContent = cur.apply;
       document.getElementById("idIntakeNote").textContent = cur.note;
     }
+    renderIntakePanel(cur);
+  }
+  /* Page 05, second half: only the selected country's intakes, in full. */
+  function renderIntakePanel(cur){
+    var rowsEl = document.getElementById("ipRows");
+    if(!rowsEl) return;
+    var cname = ROUTES[state.country].name;
+    var head = document.getElementById("ipCountryHead");
+    if(head) head.textContent = cname;
+    document.getElementById("ipCountry").textContent = cname;
+    var list = intakesFor(state.country, state.level);
+    document.getElementById("ipMeta").textContent =
+      list.length + (list.length === 1 ? " intake" : " intakes") + " a year · " +
+      (state.level === "ug" ? "Undergraduate" : "Postgraduate");
+    rowsEl.innerHTML = "";
+    list.forEach(function(it){
+      var on = cur && it.name === cur.name;
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "ip-row" + (on ? " is-on" : "");
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      var line = document.createElement("span"); line.className = "ip-line";
+      var nm = document.createElement("span"); nm.className = "ip-name"; nm.textContent = it.name;
+      var wh = document.createElement("span"); wh.className = "ip-when"; wh.textContent = it.when;
+      var tg = document.createElement("span"); tg.className = "ip-tag"; tg.textContent = it.tag;
+      var pick = document.createElement("span"); pick.className = "ip-pick";
+      pick.textContent = on ? "Your intake" : "Choose →";
+      line.appendChild(nm); line.appendChild(wh); line.appendChild(tg); line.appendChild(pick);
+      var ap = document.createElement("span"); ap.className = "ip-apply"; ap.textContent = it.apply;
+      var nt = document.createElement("span"); nt.className = "ip-note"; nt.textContent = it.note;
+      b.appendChild(line); b.appendChild(ap); b.appendChild(nt);
+      b.addEventListener("click", function(){
+        state.intake = it.name;
+        renderRoute();
+        journeyRefresh();
+      });
+      rowsEl.appendChild(b);
+    });
   }
   var journeyRefresh = function(){};
 
@@ -1383,13 +1430,13 @@ footer{background:var(--navy);color:var(--ivory);padding:clamp(70px,10vh,120px) 
   document.querySelectorAll("[data-country-link]").forEach(function(a){
     a.addEventListener("click", function(){ setRoute(a.getAttribute("data-country-link"), null); });
   });
-  document.querySelectorAll("[data-intake-country]").forEach(function(card){
-    card.addEventListener("click", function(){
-      setRoute(card.getAttribute("data-intake-country"), null);
+  var ipChange = document.getElementById("ipChange");
+  if(ipChange){
+    ipChange.addEventListener("click", function(){
       var j = document.getElementById("journey");
-      if(j){ j.scrollIntoView({ behavior: "smooth" }); }
+      if(j){ j.scrollIntoView({ behavior: reduced ? "auto" : "smooth" }); }
     });
-  });
+  }
   renderRoute();
 
   /* ---------- Spotlight (Page 06): one spotlight per country ---------- */
@@ -1584,6 +1631,37 @@ footer{background:var(--navy);color:var(--ivory);padding:clamp(70px,10vh,120px) 
   });
   renderSpotlight("italy", true);
 
+  /* ---------- Mobile menu (hamburger) ---------- */
+  var mobileMenu = document.getElementById("mobileMenu");
+  var menuBtns = document.querySelectorAll("[data-menu-open]");
+  function setMenu(open){
+    if(!mobileMenu) return;
+    mobileMenu.classList.toggle("open", open);
+    mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
+    menuBtns.forEach(function(b){ b.setAttribute("aria-expanded", open ? "true" : "false"); });
+    document.body.style.overflow = open ? "hidden" : "";
+    if(open){
+      var c = document.getElementById("mmClose");
+      if(c) c.focus();
+    }
+  }
+  menuBtns.forEach(function(b){
+    b.addEventListener("click", function(){ setMenu(true); });
+  });
+  var mmCloseBtn = document.getElementById("mmClose");
+  if(mmCloseBtn) mmCloseBtn.addEventListener("click", function(){ setMenu(false); });
+  if(mobileMenu){
+    mobileMenu.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click", function(){ setMenu(false); });
+    });
+  }
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") setMenu(false);
+  });
+  window.addEventListener("resize", function(){
+    if(window.innerWidth > 760 && mobileMenu && mobileMenu.classList.contains("open")) setMenu(false);
+  });
+
   if(reduced || !hasGsap){
     hideLoaderNow();
     runCountersInstant();
@@ -1657,8 +1735,8 @@ footer{background:var(--navy);color:var(--ivory);padding:clamp(70px,10vh,120px) 
   var mini = document.getElementById("minihead");
   ScrollTrigger.create({
     trigger: "#statement", start: "top 70%",
-    onEnter: function(){ mini.classList.add("on"); mini.setAttribute("aria-hidden","false"); mini.querySelectorAll("a").forEach(function(a){a.removeAttribute("tabindex")}); },
-    onLeaveBack: function(){ mini.classList.remove("on"); mini.setAttribute("aria-hidden","true"); mini.querySelectorAll("a").forEach(function(a){a.setAttribute("tabindex","-1")}); }
+    onEnter: function(){ mini.classList.add("on"); mini.setAttribute("aria-hidden","false"); mini.querySelectorAll("a, .menu-btn").forEach(function(a){a.removeAttribute("tabindex")}); },
+    onLeaveBack: function(){ mini.classList.remove("on"); mini.setAttribute("aria-hidden","true"); mini.querySelectorAll("a, .menu-btn").forEach(function(a){a.setAttribute("tabindex","-1")}); }
   });
 
   /* ---------- Section head line reveals ---------- */
