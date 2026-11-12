@@ -1,0 +1,1437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>HN Overseas: Lucknow to the World, Study Abroad Counselling</title>
+<meta name="description" content="HN Overseas guides students from Lucknow to 41 countries. Free counselling, 1,500 plus partner universities, Italy spotlight with near zero tuition at public universities.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HN Overseas: Lucknow to the World">
+<meta property="og:description" content="A departures board from Lucknow to 41 countries. Pick a departure and the globe flies you there. Free counselling. Real numbers. No surprises.">
+<meta property="og:url" content="https://www.hnoverseas.com">
+<meta property="og:image" content="https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=1200&q=80&auto=format&fit=crop">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#06090F;
+  --panel:#0B1220;
+  --panel-2:#0E1626;
+  --ink:#E9EEF5;
+  --ink-dim:#C7D2E0;
+  --muted:#9AA8BC;
+  --hair:rgba(233,238,245,0.14);
+  --hair-strong:rgba(233,238,245,0.28);
+  --amber:#F0A832;
+  --amber-deep:#C9821A;
+  --blue:#7CC4FF;
+  --dark:#06090F;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --font:"Archivo",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--font);
+  font-size:17px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--amber);color:var(--dark)}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+.skip-link{
+  position:fixed;top:-60px;left:16px;z-index:200;
+  background:var(--amber);color:var(--dark);
+  font-family:var(--mono);font-size:13px;font-weight:600;
+  padding:12px 18px;border-radius:2px;text-decoration:none;
+  transition:top .3s var(--ease);
+}
+.skip-link:focus{top:14px}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums}
+
+/* grid guide lines at columns 1, 5, 9 */
+.grid-lines{position:fixed;inset:0;z-index:0;pointer-events:none;max-width:1560px;margin:0 auto}
+.grid-lines i{position:absolute;top:0;bottom:0;width:1px;background:rgba(233,238,245,0.045)}
+.grid-lines i:nth-child(1){left:24px}
+.grid-lines i:nth-child(2){left:calc(24px + (100% - 48px) * 4 / 12)}
+.grid-lines i:nth-child(3){left:calc(24px + (100% - 48px) * 8 / 12)}
+@media(max-width:760px){.grid-lines{display:none}}
+
+/* ---------- loader ---------- */
+#loader{
+  position:fixed;inset:0;z-index:120;background:var(--ground);
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:28px clamp(20px,4vw,48px);
+}
+#loader .top{display:flex;justify-content:space-between;align-items:flex-start}
+#loader .brand{font-weight:800;font-stretch:118%;letter-spacing:-.02em;font-size:20px}
+#loader .brand em{font-style:normal;color:var(--amber)}
+#loader .mid{max-width:720px}
+#loader .flight-line{font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+#loader h2{font-size:clamp(38px,7vw,84px);font-weight:800;font-stretch:122%;letter-spacing:-.04em;line-height:.92}
+#loader h2 .amber{color:var(--amber)}
+#loader .bar-wrap{margin-top:34px}
+#loader .bar-track{height:2px;background:rgba(233,238,245,.14);position:relative;overflow:hidden}
+#loader .bar{position:absolute;inset:0;background:var(--amber);transform-origin:left;transform:scaleX(0)}
+#loader .bar-meta{display:flex;justify-content:space-between;margin-top:12px;color:var(--muted)}
+#loadPct{color:var(--ink);font-size:15px}
+#loader.done{opacity:0;pointer-events:none;transition:opacity .7s var(--ease)}
+body.loading{overflow:hidden}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px clamp(20px,4vw,48px);
+  mix-blend-mode:normal;
+}
+.topbar .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,15,.82),rgba(6,9,15,0));z-index:-1}
+.logo{font-weight:800;font-stretch:118%;letter-spacing:-.02em;font-size:18px;text-decoration:none;line-height:1}
+.logo em{font-style:normal;color:var(--amber)}
+.logo small{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.22em;color:var(--muted);margin-top:4px}
+.topnav{display:flex;gap:6px;align-items:center}
+.topnav a{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink-dim);padding:10px 12px;border-radius:2px;min-height:40px;
+  display:inline-flex;align-items:center;transition:color .3s var(--ease);
+}
+.topnav a:hover{color:var(--amber)}
+@media(max-width:860px){.topnav a:not(.nav-cta){display:none}}
+.topnav a.nav-cta{
+  background:var(--amber);color:var(--dark);font-weight:600;padding:10px 16px;
+}
+.topnav a.nav-cta:hover{color:var(--dark);background:var(--ink)}
+
+/* ---------- buttons ---------- */
+.btn{
+  position:relative;display:inline-flex;align-items:center;gap:12px;
+  min-height:52px;padding:15px 26px;border-radius:2px;border:1px solid var(--amber);
+  background:var(--amber);color:var(--dark);
+  font-family:var(--font);font-weight:700;font-size:15.5px;letter-spacing:.01em;
+  text-decoration:none;overflow:hidden;isolation:isolate;
+  transition:color .35s var(--ease);
+}
+.btn::before{
+  content:"";position:absolute;inset:0;background:var(--ink);z-index:-1;
+  transform:scaleX(0);transform-origin:var(--o,left center);
+  transition:transform .5s var(--ease);
+}
+.btn:hover::before,.btn:focus-visible::before{transform:scaleX(1)}
+.btn .arr{font-family:var(--mono);font-weight:500;transition:transform .4s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--hair-strong)}
+.btn.ghost::before{background:var(--amber)}
+.btn.ghost:hover{color:var(--dark)}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:100svh;z-index:1;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:110px clamp(20px,4vw,48px) 0;
+  overflow:hidden;
+}
+#globeWrap{position:absolute;inset:0;z-index:0}
+#globeCanvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#globeCanvas:active{cursor:grabbing}
+.globe-fallback{
+  position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 68% 42%,rgba(124,196,255,.16),transparent 55%),radial-gradient(circle at 68% 42%,rgba(240,168,50,.10),transparent 40%);
+}
+.globe-fallback svg{width:min(74vmin,660px);height:min(74vmin,660px)}
+#globeWrap.no-webgl #globeCanvas{display:none}
+#globeWrap.no-webgl .globe-fallback{display:flex}
+.hero-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(6,9,15,.88) 0%,rgba(6,9,15,.55) 42%,rgba(6,9,15,0) 68%),linear-gradient(0deg,rgba(6,9,15,.92) 0%,rgba(6,9,15,0) 34%)}
+.corner{position:absolute;z-index:3;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.corner b{color:var(--ink);font-weight:500}
+.corner.tl{top:86px;left:clamp(20px,4vw,48px)}
+.corner.tr{top:86px;right:clamp(20px,4vw,48px);text-align:right}
+.corner .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-right:8px;vertical-align:1px;animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+@media(max-width:760px){.corner.tr{display:none}.corner.tl{top:78px}}
+.hero-content{position:relative;z-index:2;max-width:1560px;width:100%;margin:0 auto}
+.hero-kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
+.hero-kicker span{color:var(--muted)}
+h1{
+  font-size:clamp(52px,9.2vw,148px);
+  font-weight:800;font-stretch:124%;
+  letter-spacing:-.04em;line-height:.9;
+  max-width:10ch;
+}
+h1 .line{display:block;overflow:hidden}
+h1 .line span{display:block}
+h1 .world{color:var(--amber)}
+.hero-sub{
+  margin-top:26px;max-width:52ch;font-size:clamp(17px,1.6vw,20px);
+  line-height:1.55;color:var(--ink-dim);font-weight:400;
+}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;align-items:center}
+.hero-actions .note{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em}
+.hero-bottom{
+  position:relative;z-index:2;max-width:1560px;width:100%;margin:56px auto 0;
+  display:grid;grid-template-columns:1fr 400px;gap:24px;align-items:end;
+}
+@media(max-width:960px){.hero-bottom{grid-template-columns:1fr}}
+
+/* departures strip */
+.dep-strip{border-top:1px solid var(--hair);padding:16px 0 22px;overflow:hidden}
+.dep-strip .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-bottom:12px;display:flex;justify-content:space-between}
+.dep-strip .lbl b{color:var(--amber);font-weight:500}
+.dep-row{display:flex;gap:8px;flex-wrap:wrap}
+.dep-chip{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;
+  background:transparent;color:var(--ink-dim);
+  border:1px solid var(--hair-strong);border-radius:2px;
+  padding:10px 14px;min-height:44px;
+  display:inline-flex;align-items:center;gap:9px;
+  transition:border-color .3s var(--ease),color .3s var(--ease),background .3s var(--ease);
+}
+.dep-chip i{font-style:normal;color:var(--blue);font-size:11px}
+.dep-chip[data-dest="italy"] i{color:var(--amber)}
+.dep-chip:hover{border-color:var(--amber);color:var(--ink)}
+.dep-chip.active{background:var(--amber);border-color:var(--amber);color:var(--dark);font-weight:600}
+.dep-chip.active i{color:var(--dark)}
+
+/* fact card */
+.fact-card{
+  background:var(--panel);border:1px solid var(--hair);
+  border-top:3px solid var(--amber);border-radius:2px;
+  padding:22px 22px 18px;margin-bottom:22px;
+}
+.fact-card .fc-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.fact-card .fc-code{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--amber);text-transform:uppercase}
+.fact-card .fc-status{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}
+.fact-card h2{font-size:30px;font-weight:800;font-stretch:118%;letter-spacing:-.03em;line-height:1;margin-top:10px}
+.fact-card h2 span{color:var(--muted);font-weight:500;font-stretch:100%}
+.fact-card .fc-route{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:8px;letter-spacing:.04em}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;margin-top:18px;padding-top:16px;border-top:1px solid var(--hair)}
+.fact-grid dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.fact-grid dd{font-size:15.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.fact-card .fc-note{margin-top:16px;font-size:14.5px;line-height:1.5;color:var(--ink-dim)}
+.fact-card .fc-note strong{color:var(--amber);font-weight:600}
+</style>
+</head>
+<body class="loading">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div id="loader" role="status" aria-label="Loading">
+  <div class="top">
+    <div class="brand">HN <em>OVERSEAS</em></div>
+    <div class="mono" style="color:var(--muted)">EST. LUCKNOW, INDIA</div>
+  </div>
+  <div class="mid">
+    <p class="flight-line">Now boarding: Lucknow to the world</p>
+    <h2>DEPARTURES<br><span class="amber">41 COUNTRIES</span></h2>
+    <div class="bar-wrap">
+      <div class="bar-track"><div class="bar" id="loadBar"></div></div>
+      <div class="bar-meta mono"><span id="loadMsg">Checking the board</span><span id="loadPct">0%</span></div>
+    </div>
+  </div>
+  <div class="mono" style="color:var(--muted);display:flex;justify-content:space-between"><span>LKO 26.85N 80.95E</span><span>FREE COUNSELLING</span></div>
+</div>
+
+<div class="grid-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="topbar">
+  <div class="scrim" aria-hidden="true"></div>
+  <a class="logo" href="#top">HN <em>OVERSEAS</em><small>STUDY ABROAD, LUCKNOW</small></a>
+  <nav class="topnav" aria-label="Main">
+    <a href="#destinations">Destinations</a>
+    <a href="#intakes">Intakes</a>
+    <a href="#journey">Journey</a>
+    <a href="#italy">Italy</a>
+    <a href="#stories">Stories</a>
+    <a class="nav-cta" href="https://wa.me/919278011092" target="_blank" rel="noopener">Book free counselling</a>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ================= HERO ================= -->
+<section class="hero" id="top" aria-label="Introduction">
+  <div id="globeWrap">
+    <canvas id="globeCanvas" aria-label="Interactive globe showing flight arcs from Lucknow to nine study destinations. Use the destination buttons below to spin the globe."></canvas>
+    <div class="globe-fallback" aria-hidden="true">
+      <svg viewBox="0 0 640 640" role="presentation" focusable="false">
+        <defs>
+          <pattern id="gDots" width="17" height="17" patternUnits="userSpaceOnUse">
+            <circle cx="3" cy="3" r="2.1" fill="#6E93B8"></circle>
+          </pattern>
+          <clipPath id="gClip"><circle cx="320" cy="320" r="248"></circle></clipPath>
+        </defs>
+        <circle cx="320" cy="320" r="248" fill="#0B1220"></circle>
+        <g clip-path="url(#gClip)">
+          <rect x="72" y="72" width="496" height="496" fill="url(#gDots)" opacity="0.75"></rect>
+          <ellipse cx="320" cy="320" rx="248" ry="86" fill="none" stroke="rgba(233,238,245,0.13)" stroke-width="1"></ellipse>
+          <ellipse cx="320" cy="320" rx="248" ry="168" fill="none" stroke="rgba(233,238,245,0.09)" stroke-width="1"></ellipse>
+          <ellipse cx="320" cy="320" rx="86" ry="248" fill="none" stroke="rgba(233,238,245,0.13)" stroke-width="1"></ellipse>
+          <ellipse cx="320" cy="320" rx="168" ry="248" fill="none" stroke="rgba(233,238,245,0.09)" stroke-width="1"></ellipse>
+        </g>
+        <circle cx="320" cy="320" r="248" fill="none" stroke="rgba(124,196,255,0.35)" stroke-width="1.5"></circle>
+        <path d="M 428 268 Q 330 130 238 208" fill="none" stroke="#F0A832" stroke-width="2.5"></path>
+        <path d="M 428 268 Q 480 170 392 118" fill="none" stroke="#7CC4FF" stroke-width="1.5" opacity="0.6"></path>
+        <path d="M 428 268 Q 540 300 520 420" fill="none" stroke="#7CC4FF" stroke-width="1.5" opacity="0.6"></path>
+        <circle cx="428" cy="268" r="6" fill="#E9EEF5"></circle>
+        <circle cx="428" cy="268" r="13" fill="none" stroke="rgba(233,238,245,0.5)" stroke-width="1.5"></circle>
+        <circle cx="238" cy="208" r="6" fill="#F0A832"></circle>
+        <circle cx="238" cy="208" r="13" fill="none" stroke="rgba(240,168,50,0.55)" stroke-width="1.5"></circle>
+        <circle cx="392" cy="118" r="4.5" fill="#7CC4FF"></circle>
+        <circle cx="520" cy="420" r="4.5" fill="#7CC4FF"></circle>
+      </svg>
+    </div>
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <p class="corner tl"><span class="dot"></span>Live board <b>LKO International</b></p>
+  <p class="corner tr">Origin <b>Lucknow 26.85N, 80.95E</b><br>All flights counselled free</p>
+
+  <div class="hero-content">
+    <p class="hero-kicker">Departures board <span>/ pick a flight, we handle the rest</span></p>
+    <h1>
+      <span class="line"><span data-intro-line>Lucknow to</span></span>
+      <span class="line"><span data-intro-line>the <span class="world">world.</span></span></span>
+    </h1>
+    <p class="hero-sub">HN Overseas guides students from the first counselling call to the day they land. <strong>Free counselling. Real numbers. No surprises.</strong></p>
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/919278011092" target="_blank" rel="noopener" data-flood>Book free counselling <span class="arr" aria-hidden="true">-&gt;</span></a>
+      <a class="btn ghost" href="#destinations" data-flood>See the board <span class="arr" aria-hidden="true">-&gt;</span></a>
+      <span class="note">5.0 STARS, 38 GOOGLE REVIEWS</span>
+    </div>
+  </div>
+
+  <div class="hero-bottom">
+    <div class="dep-strip">
+      <p class="lbl"><span>Departures from Lucknow</span><b>Tap a destination to fly the globe</b></p>
+      <div class="dep-row" role="group" aria-label="Choose a destination">
+        <button class="dep-chip" data-dest="usa" type="button"><i>HN 101</i> USA</button>
+        <button class="dep-chip" data-dest="uk" type="button"><i>HN 102</i> UK</button>
+        <button class="dep-chip" data-dest="canada" type="button"><i>HN 103</i> Canada</button>
+        <button class="dep-chip" data-dest="australia" type="button"><i>HN 104</i> Australia</button>
+        <button class="dep-chip" data-dest="ireland" type="button"><i>HN 105</i> Ireland</button>
+        <button class="dep-chip" data-dest="uae" type="button"><i>HN 106</i> UAE</button>
+        <button class="dep-chip" data-dest="newzealand" type="button"><i>HN 107</i> New Zealand</button>
+        <button class="dep-chip" data-dest="singapore" type="button"><i>HN 108</i> Singapore</button>
+        <button class="dep-chip active" data-dest="italy" type="button"><i>HN 109</i> Italy</button>
+      </div>
+    </div>
+
+    <article class="fact-card" aria-live="polite" aria-label="Destination fact card">
+      <div class="fc-top"><span class="fc-code" id="fcCode">HN 109 / MXP</span><span class="fc-status" id="fcStatus">Boarding</span></div>
+      <h2 id="fcTitle">Milan <span>/ Italy</span></h2>
+      <p class="fc-route" id="fcRoute">LKO 26.85N 80.95E &nbsp;-&gt;&nbsp; MXP 45.46N 9.19E</p>
+      <dl class="fact-grid">
+        <div><dt>Distance from Lucknow</dt><dd id="fcDist">6,540 km</dd></div>
+        <div><dt>Arc status</dt><dd id="fcArc">Amber route, our specialty</dd></div>
+        <div><dt>Counselling fee</dt><dd>Free</dd></div>
+        <div><dt>Visa success rate</dt><dd>98%</dd></div>
+        <div><dt>Yearly intakes</dt><dd id="fcIntakes">September only</dd></div>
+        <div><dt>Choose yours</dt><dd><a href="#intakes" style="color:var(--amber);text-decoration:none">See the intake board -&gt;</a></dd></div>
+      </dl>
+      <p class="fc-note" id="fcNote">Near zero tuition at public universities. <strong>Scholarships of about 7,000 to 8,000 euros a year</strong> for eligible students.</p>
+    </article>
+  </div>
+</section>
+
+<style>
+.wrap{max-width:1560px;margin:0 auto;padding:0 clamp(20px,4vw,48px);position:relative;z-index:1}
+section.block{padding:clamp(72px,10vw,140px) 0;position:relative;z-index:1}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(36px,5vw,64px);flex-wrap:wrap}
+.sec-head h2{font-size:clamp(36px,5.2vw,72px);font-weight:800;font-stretch:122%;letter-spacing:-.04em;line-height:.95;max-width:14ch}
+.sec-head h2 .amber{color:var(--amber)}
+.sec-head .side{max-width:38ch;color:var(--muted);font-size:16.5px}
+.sec-tag{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+[data-reveal]{opacity:0;transform:translateY(26px)}
+.no-motion [data-reveal],.reduced [data-reveal]{opacity:1;transform:none}
+
+/* stats band */
+.stats{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:var(--panel)}
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);}
+.stat{padding:34px 22px 30px;border-left:1px solid var(--hair)}
+.stat:first-child{border-left:none;padding-left:0}
+.stat .v{font-size:clamp(30px,3.4vw,50px);font-weight:800;font-stretch:120%;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.stat .v em{font-style:normal;color:var(--amber)}
+.stat .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:10px;line-height:1.5}
+@media(max-width:1020px){.stats-grid{grid-template-columns:repeat(3,1fr)}.stat:nth-child(4){border-left:none;padding-left:0}.stat{border-top:1px solid var(--hair)}.stat:nth-child(-n+3){border-top:none}}
+@media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stat{border-top:1px solid var(--hair)!important}.stat:nth-child(-n+2){border-top:none!important}.stat:nth-child(odd){border-left:none;padding-left:0}.stat:nth-child(4){border-left:1px solid var(--hair);padding-left:22px}}
+
+/* destinations index */
+.dest-list{border-top:1px solid var(--hair)}
+.dest-row{
+  display:grid;grid-template-columns:64px 1fr auto auto;gap:20px;align-items:center;
+  width:100%;text-align:left;background:transparent;border:none;color:var(--ink);
+  border-bottom:1px solid var(--hair);padding:18px 8px;min-height:76px;
+  transition:background .35s var(--ease),padding-left .35s var(--ease);
+  position:relative;
+}
+.dest-row:hover,.dest-row:focus-visible{background:var(--panel);padding-left:18px}
+.dest-row.active{background:var(--panel)}
+.dest-row.active .d-name{color:var(--amber)}
+.dest-row .d-idx{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.dest-row .d-name{font-size:clamp(24px,3.4vw,42px);font-weight:800;font-stretch:120%;letter-spacing:-.03em;line-height:1;transition:color .3s var(--ease)}
+.dest-row .d-name small{font-size:.42em;font-weight:500;color:var(--muted);font-stretch:100%;letter-spacing:0;margin-left:10px}
+.dest-row .d-dist{font-family:var(--mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;text-align:right}
+.dest-row .d-go{font-family:var(--mono);font-size:12px;color:var(--blue);letter-spacing:.08em}
+.dest-thumb{
+  position:fixed;z-index:40;width:300px;height:200px;object-fit:cover;border-radius:2px;
+  pointer-events:none;opacity:0;transform:scale(.94) rotate(-2deg);
+  transition:opacity .3s var(--ease),transform .45s var(--ease);
+  border:1px solid var(--hair-strong);display:none;
+}
+.dest-thumb.show{opacity:1;transform:scale(1) rotate(-2deg)}
+@media(hover:hover) and (min-width:961px){.dest-thumb{display:block}}
+.d-inline-thumb{display:none}
+@media(hover:none),(max-width:960px){
+  .dest-row{grid-template-columns:56px 84px 1fr auto}
+  .d-inline-thumb{display:block;width:84px;height:58px;object-fit:cover;border-radius:2px}
+  .dest-row .d-dist{display:none}
+}
+@media(max-width:560px){
+  .dest-row{grid-template-columns:44px 64px 1fr;gap:12px}
+  .d-inline-thumb{width:64px;height:48px}
+  .dest-row .d-go{display:none}
+  .dest-row .d-name small{display:block;margin-left:0;margin-top:4px}
+}
+
+/* yearly intakes board */
+.intake-board{border:1px solid var(--hair);background:var(--panel);border-radius:2px;padding:20px clamp(14px,2.4vw,28px) 14px}
+.ib-months,.intake-row{display:grid;grid-template-columns:150px repeat(12,1fr);align-items:center;gap:4px}
+.ib-months{padding:0 8px 10px;border-bottom:1px solid var(--hair)}
+.ib-months span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--muted);text-align:center;text-transform:uppercase}
+.ib-months .ib-name-h{text-align:left}
+.intake-row{
+  width:100%;background:transparent;border:none;border-bottom:1px solid var(--hair);
+  color:var(--ink);padding:13px 8px;min-height:56px;text-align:left;
+  transition:background .3s var(--ease);
+}
+.intake-row:hover,.intake-row:focus-visible{background:var(--panel-2)}
+.intake-row.active{background:var(--panel-2)}
+.intake-row .ir-name{font-size:16.5px;font-weight:700;font-stretch:110%;letter-spacing:-.01em;line-height:1.15}
+.intake-row .ir-name small{display:block;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.1em;color:var(--muted);margin-top:3px}
+.intake-row.active .ir-name{color:var(--amber)}
+.intake-row .cell{display:flex;align-items:center;justify-content:center;height:100%}
+.intake-row .dot{width:11px;height:11px;border-radius:50%;flex:none}
+.intake-row .dot.main{background:var(--amber)}
+.intake-row .dot.second{background:var(--blue)}
+.intake-row .dot.limited{border:1.5px solid var(--muted);background:transparent}
+.ib-legend{display:flex;gap:22px;flex-wrap:wrap;padding:14px 8px 6px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.ib-legend span{display:inline-flex;align-items:center;gap:8px}
+.ib-legend .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.ib-legend .dot.main{background:var(--amber)}
+.ib-legend .dot.second{background:var(--blue)}
+.ib-legend .dot.limited{border:1.5px solid var(--muted)}
+@media(max-width:640px){
+  .ib-months,.intake-row{grid-template-columns:86px repeat(12,1fr);gap:2px}
+  .intake-row .ir-name{font-size:13.5px}
+  .intake-row .ir-name small{font-size:9px}
+  .intake-row .dot{width:8px;height:8px}
+  .ib-months span{font-size:9px}
+}
+.intake-detail{margin-top:26px;border:1px solid var(--hair);border-top:3px solid var(--amber);background:var(--panel);border-radius:2px;padding:24px clamp(16px,2.6vw,30px) 26px}
+.id-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap}
+.id-head h3{font-size:clamp(24px,3vw,36px);font-weight:800;font-stretch:118%;letter-spacing:-.03em;line-height:1}
+.id-head h3 span{color:var(--muted);font-weight:500}
+.id-next{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}
+.id-next b{color:var(--amber);font-weight:600}
+.id-cards{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.intake-card{
+  flex:1 1 190px;text-align:left;background:var(--panel-2);color:var(--ink);
+  border:1px solid var(--hair-strong);border-radius:2px;padding:16px 18px;min-height:44px;
+  transition:border-color .3s var(--ease),background .3s var(--ease);
+}
+.intake-card:hover{border-color:var(--amber)}
+.intake-card.sel{border-color:var(--amber);background:rgba(240,168,50,.08)}
+.intake-card .ic-name{font-size:19px;font-weight:800;font-stretch:114%;letter-spacing:-.02em;display:block}
+.intake-card .ic-months{font-family:var(--mono);font-size:12.5px;color:var(--ink-dim);letter-spacing:.05em;display:block;margin-top:5px}
+.intake-card .ic-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);display:block;margin-top:10px}
+.intake-card.sel .ic-tag{color:var(--amber)}
+.intake-card .ic-note{display:block;margin-top:10px;font-size:14px;line-height:1.5;color:var(--muted)}
+.id-foot{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid var(--hair)}
+.id-choice{font-size:16.5px;color:var(--ink-dim);max-width:52ch}
+.id-choice strong{color:var(--amber);font-weight:700}
+
+/* journey */
+.journey-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,5vw,80px);align-items:start}
+@media(max-width:900px){.journey-grid{grid-template-columns:1fr}}
+.journey-sticky{position:sticky;top:110px}
+@media(max-width:900px){.journey-sticky{position:static}}
+.journey-sticky h2{font-size:clamp(36px,5vw,68px);font-weight:800;font-stretch:122%;letter-spacing:-.04em;line-height:.95}
+.journey-sticky h2 .amber{color:var(--amber)}
+.journey-sticky p{color:var(--muted);margin-top:20px;max-width:36ch;font-size:16.5px}
+.journey-sticky .stamp-big{
+  margin-top:34px;display:inline-block;border:2px solid var(--amber);color:var(--amber);
+  font-family:var(--mono);font-size:13px;letter-spacing:.18em;padding:12px 18px;border-radius:2px;
+  transform:rotate(-3deg);text-transform:uppercase;
+}
+.step{display:grid;grid-template-columns:86px 1fr;gap:22px;padding:30px 0;border-bottom:1px solid var(--hair)}
+.step:first-child{padding-top:6px}
+.stamp{
+  width:76px;height:76px;border:1.5px dashed var(--hair-strong);border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:var(--mono);transform:rotate(-6deg);flex:none;
+  transition:border-color .4s var(--ease),transform .4s var(--ease);
+}
+.step:hover .stamp{border-color:var(--amber);transform:rotate(3deg)}
+.stamp b{font-size:19px;color:var(--amber);font-weight:600;line-height:1}
+.stamp span{font-size:9.5px;letter-spacing:.14em;color:var(--muted);margin-top:3px}
+.step h3{font-size:clamp(21px,2.4vw,29px);font-weight:700;font-stretch:112%;letter-spacing:-.02em;line-height:1.15}
+.step p{color:var(--muted);margin-top:8px;font-size:16px;max-width:52ch}
+.step p strong{color:var(--ink-dim);font-weight:600}
+@media(max-width:560px){.step{grid-template-columns:64px 1fr;gap:16px}.stamp{width:60px;height:60px}.stamp b{font-size:15px}}
+
+/* italy */
+.italy-sec{background:var(--amber);color:var(--dark);position:relative;z-index:1}
+.italy-sec .sec-tag{color:#5C3A05}
+.italy-grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(28px,4vw,64px);align-items:start}
+@media(max-width:900px){.italy-grid{grid-template-columns:1fr}}
+.italy-photo{position:relative}
+.italy-photo img{width:100%;height:clamp(320px,52vw,600px);object-fit:cover;border-radius:2px}
+.italy-photo figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.06em;margin-top:12px;color:#4A3003;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.italy-photo .stamp-it{
+  position:absolute;top:18px;right:18px;background:var(--dark);color:var(--amber);
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;padding:10px 14px;border-radius:2px;
+  transform:rotate(3deg);text-transform:uppercase;
+}
+.italy-copy h2{font-size:clamp(38px,5.4vw,76px);font-weight:800;font-stretch:124%;letter-spacing:-.04em;line-height:.92}
+.italy-copy .lead{margin-top:18px;font-size:18px;line-height:1.55;color:#33230A;max-width:44ch;font-weight:500}
+.italy-facts{margin-top:30px;border-top:2px solid rgba(6,9,15,.85)}
+.italy-facts li{list-style:none;display:grid;grid-template-columns:118px 1fr;gap:16px;padding:15px 0;border-bottom:1px solid rgba(6,9,15,.28);align-items:baseline}
+.italy-facts .fv{font-size:clamp(19px,2vw,25px);font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+.italy-facts .fk{font-size:15px;line-height:1.45;color:#2A1D05}
+@media(max-width:560px){.italy-facts li{grid-template-columns:96px 1fr}}
+.italy-sec .btn{background:var(--dark);color:var(--amber);border-color:var(--dark);margin-top:30px}
+.italy-sec .btn::before{background:var(--ink)}
+.italy-sec .btn:hover{color:var(--dark)}
+
+/* stories */
+.wall{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.story{border:1px solid var(--hair);background:var(--panel);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
+.story img{width:100%;object-fit:cover;filter:saturate(.85)}
+.story .s-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.story .s-name{font-size:21px;font-weight:800;font-stretch:114%;letter-spacing:-.02em;line-height:1.1}
+.story .s-route{font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--blue);line-height:1.6}
+.story .s-fact{color:var(--muted);font-size:15px;line-height:1.5}
+.story .s-badge{margin-top:auto;padding-top:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--amber);text-transform:uppercase}
+.story.s1{grid-column:span 7}.story.s1 img{height:300px}
+.story.s2{grid-column:span 5}.story.s2 img{height:300px}
+.story.s3{grid-column:span 4}.story.s3 img{height:210px}
+.story.s4{grid-column:span 4}.story.s4 img{height:210px}
+.story.s5{grid-column:span 4}.story.s5 img{height:210px}
+@media(max-width:900px){.story.s1,.story.s2,.story.s3,.story.s4,.story.s5{grid-column:span 12}.story img{height:220px!important}}
+
+/* mentor */
+.mentor-grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(28px,5vw,80px);align-items:start}
+@media(max-width:900px){.mentor-grid{grid-template-columns:1fr}}
+.mentor-grid h2{font-size:clamp(34px,4.6vw,62px);font-weight:800;font-stretch:120%;letter-spacing:-.035em;line-height:.98}
+.mentor-grid h2 .amber{color:var(--amber)}
+.mentor-bio{margin-top:22px;color:var(--ink-dim);font-size:17.5px;line-height:1.6;max-width:56ch}
+.mentor-bio strong{color:var(--ink)}
+.mentor-nums{border-top:1px solid var(--hair)}
+.mentor-nums .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--hair)}
+.mentor-nums .v{font-size:clamp(30px,3.6vw,48px);font-weight:800;font-stretch:118%;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.mentor-nums .v em{font-style:normal;color:var(--amber)}
+.mentor-nums .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right;line-height:1.6}
+
+/* footer */
+footer{position:relative;z-index:1;border-top:1px solid var(--hair);background:var(--panel);overflow:hidden}
+.foot-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;padding:clamp(56px,8vw,100px) 0 0}
+.foot-contact{grid-column:span 5}
+.foot-links{grid-column:span 3}
+.foot-honest{grid-column:span 4}
+@media(max-width:900px){.foot-contact,.foot-links,.foot-honest{grid-column:span 12}}
+footer h2{font-size:clamp(30px,4vw,52px);font-weight:800;font-stretch:120%;letter-spacing:-.03em;line-height:1}
+footer h2 .amber{color:var(--amber)}
+.foot-contact p{color:var(--muted);margin-top:14px;max-width:36ch}
+.foot-contact .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.contact-line{display:flex;flex-direction:column;gap:4px;padding:13px 0;border-bottom:1px solid var(--hair)}
+.contact-line .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.contact-line a{font-size:17px;font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums}
+.contact-line a:hover{color:var(--amber)}
+.honest-box{border:1px solid var(--amber);border-radius:2px;padding:22px}
+.honest-box .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--amber);text-transform:uppercase;margin-bottom:10px}
+.honest-box p{font-size:16.5px;line-height:1.55;color:var(--ink-dim)}
+.honest-box p strong{color:var(--ink)}
+.honest-box .stars{margin-top:16px;padding-top:14px;border-top:1px solid var(--hair);font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+.honest-box .stars b{color:var(--amber);font-weight:600}
+.wordmark{
+  font-weight:800;font-stretch:125%;letter-spacing:-.03em;line-height:.82;
+  font-size:clamp(38px,12.6vw,208px);white-space:nowrap;text-align:center;
+  color:transparent;-webkit-text-stroke:1.5px rgba(233,238,245,.35);
+  padding:clamp(30px,5vw,64px) 0 10px;user-select:none;
+}
+.wordmark b{color:var(--amber);-webkit-text-stroke:0;font-weight:800}
+.foot-base{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:18px 0 26px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<!-- ================= STATS ================= -->
+<section class="stats" aria-label="HN Overseas in numbers">
+  <div class="wrap" style="padding-top:0;padding-bottom:0">
+    <div class="stats-grid">
+      <div class="stat"><div class="v"><span data-count="1500">1,500</span><em>+</em></div><p class="k">Partner universities</p></div>
+      <div class="stat"><div class="v"><span data-count="41">41</span><em>+</em></div><p class="k">Countries covered</p></div>
+      <div class="stat"><div class="v"><span data-count="140000" data-format="in">1,40,000</span><em>+</em></div><p class="k">Courses on offer</p></div>
+      <div class="stat"><div class="v"><span data-count="3500" data-format="in">3,500</span><em>+</em></div><p class="k">Students counselled</p></div>
+      <div class="stat"><div class="v"><em>$</em><span data-count="100">100</span>M<em>+</em></div><p class="k">Scholarships secured</p></div>
+      <div class="stat"><div class="v"><span data-count="98">98</span><em>%</em></div><p class="k">Visa success rate</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DESTINATIONS ================= -->
+<section class="block" id="destinations" aria-labelledby="destH">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-tag">The board / 09 featured departures of 41 countries</p>
+        <h2 id="destH" data-reveal>Nine ways <span class="amber">out of Lucknow.</span></h2>
+      </div>
+      <p class="side" data-reveal>Every row is a live departure. Select one and the globe in the hero spins to that country, with its fact card updated. Distances are great circle distances from Lucknow.</p>
+    </div>
+    <img class="dest-thumb" id="destThumb" src="https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=1200&q=80&auto=format&fit=crop" alt="" aria-hidden="true">
+    <div class="dest-list">
+      <button class="dest-row" type="button" data-dest="usa" data-reveal>
+        <span class="d-idx">HN 101</span>
+        <img class="d-inline-thumb" src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1200&q=80&auto=format&fit=crop" alt="New York City skyline at dusk, United States">
+        <span class="d-name">USA<small>New York</small></span>
+        <span class="d-dist" data-dist="usa"></span>
+        <span class="d-go">FLY -&gt;</span>
+      </button>
+      <button class="dest-row" type="button" data-dest="uk" data-reveal>
+        <span class="d-idx">HN 102</span>
+        <img class="d-inline-thumb" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80&auto=format&fit=crop" alt="London skyline with the Thames and Tower Bridge, United Kingdom">
+        <span class="d-name">UK<small>London</small></span>
+        <span class="d-dist" data-dist="uk"></span>
+        <span class="d-go">FLY -&gt;</span>
+      </button>
+      <button class="dest-row" type="button" data-dest="canada" data-reveal>
+        <span class="d-idx">HN 103</span>
+        <img class="d-inline-thumb" src="https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1200&q=80&auto=format&fit=crop" alt="Toronto skyline across the harbour in winter, Canada">
+        <span class="d-name">Canada<small>Toronto</small></span>
+        <span class="d-dist" data-dist="canada"></span>
+        <span class="d-go">FLY -&gt;</span>
+      </button>
+      <button class="dest-row" type="button" data-dest="australia" data-reveal>
+        <span class="d-idx">HN 104</span>
+        <img class="d-inline-thumb" src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1200&q=80&auto=format&fit=crop" alt="Sydney Opera House and harbour, Australia">
+        <span class="d-name">Australia<small>Sydney</small></span>
+        <span class="d-dist" data-dist="australia"></span>
+        <span class="d-go">FLY -&gt;</span>
+      </button>
+      <button class="dest-row" type="button" data-dest="ireland" data-reveal>
+        <span class="d-idx">HN 105</span>
+        <img class="d-inline-thumb" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200&q=80&auto=format&fit=crop" alt="Historic European street scene representing Dublin, Ireland">
+        <span class="d-name">Ireland<small>Dublin</small></span>
+        <span class="d-dist" data-dist="ireland"></span>
+        <span class="d-go">FLY -&gt;</span>
+      </button>
+      <button class="dest-row" type="button" data-dest="uae" data-reveal>
+        <span class="d-idx">HN 106</span>
+        <img class="d-inline-thumb" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80&auto=format&fit=crop" alt="Dubai skyline with the Burj Khalifa, United Arab Emirates">
+        <span class="d-name">UAE<small>Dubai</small></span>
+        <span class="d-dist" data-dist="uae"></span>
+        <span class="d-go">FLY -&gt;</span>
+      </button>
+      <button class="dest-row" type="button" data-dest="newzealand" data-reveal>
+        <span class="d-idx">HN 107</span>
+        <img class="d-inline-thumb" src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1200&q=80&auto=format&fit=crop" alt="New Zealand mountain lake landscape near Auckland routes">
+        <span class="d-name">New Zealand<small>Auckland</small></span>
+        <span class="d-dist" data-dist="newzealand"></span>
+        <span class="d-go">FLY -&gt;</span>
+      </button>
+      <button class="dest-row" type="button" data-dest="singapore" data-reveal>
+        <span class="d-idx">HN 108</span>
+        <img class="d-inline-thumb" src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80&auto=format&fit=crop" alt="Singapore Marina Bay skyline at night">
+        <span class="d-name">Singapore<small>Singapore</small></span>
+        <span class="d-dist" data-dist="singapore"></span>
+        <span class="d-go">FLY -&gt;</span>
+      </button>
+      <button class="dest-row active" type="button" data-dest="italy" data-reveal>
+        <span class="d-idx">HN 109</span>
+        <img class="d-inline-thumb" src="https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=1200&q=80&auto=format&fit=crop" alt="Milan Cathedral, the Duomo, in Italy">
+        <span class="d-name">Italy<small>Milan</small></span>
+        <span class="d-dist" data-dist="italy"></span>
+        <span class="d-go">FLY -&gt;</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= YEARLY INTAKES ================= -->
+<section class="block" id="intakes" aria-labelledby="intakesH" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-tag">Yearly intakes / the annual board</p>
+        <h2 id="intakesH" data-reveal>Choose your <span class="amber">intake.</span></h2>
+      </div>
+      <p class="side" data-reveal>Every country runs its own academic calendar. The board below shows the intakes each destination offers across the year. Select a destination to see its intakes, then pick the one you want to fly on.</p>
+    </div>
+    <div class="intake-board" data-reveal>
+      <div class="ib-months" aria-hidden="true">
+        <span class="ib-name-h">Destination</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+      </div>
+      <div id="intakeRows"></div>
+      <p class="ib-legend">
+        <span><i class="dot main"></i> Main intake</span>
+        <span><i class="dot second"></i> Second intake</span>
+        <span><i class="dot limited"></i> Limited courses</span>
+      </p>
+    </div>
+    <div class="intake-detail" data-reveal>
+      <div class="id-head">
+        <h3 id="idTitle">Milan <span>/ Italy intakes</span></h3>
+        <p class="id-next" id="idNext"></p>
+      </div>
+      <div class="id-cards" id="intakeCards" role="group" aria-label="Choose an intake"></div>
+      <div class="id-foot">
+        <p class="id-choice" id="intakeChoice" aria-live="polite"></p>
+        <a class="btn" id="intakeCta" href="https://wa.me/919278011092" target="_blank" rel="noopener" data-flood>Ask about this intake <span class="arr" aria-hidden="true">-&gt;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section class="block" id="journey" aria-labelledby="journeyH" style="padding-top:20px">
+  <div class="wrap">
+    <div class="journey-grid">
+      <div class="journey-sticky">
+        <p class="sec-tag">The journey / seven stamps</p>
+        <h2 id="journeyH" data-reveal>First call to <span class="amber">first day abroad.</span></h2>
+        <p data-reveal>One team stays with the student through all seven steps. Each step is stamped only when the paperwork for it is actually done.</p>
+        <span class="stamp-big" data-reveal>Checked at every step</span>
+      </div>
+      <div>
+        <article class="step" data-reveal>
+          <div class="stamp"><b>01</b><span>STEP</span></div>
+          <div><h3>Free counselling</h3><p>It starts with a conversation, not a sales pitch. We study the student profile first and only take a case forward when the destination is a genuine fit. <strong>Counselling costs nothing.</strong></p></div>
+        </article>
+        <article class="step" data-reveal>
+          <div class="stamp"><b>02</b><span>STEP</span></div>
+          <div><h3>Test preparation</h3><p>Guidance and preparation support for <strong>IELTS, TOEFL, SAT, GRE and GMAT</strong>, matched to what the shortlisted universities actually ask for.</p></div>
+        </article>
+        <article class="step" data-reveal>
+          <div class="stamp"><b>03</b><span>STEP</span></div>
+          <div><h3>University shortlisting and applications</h3><p>A shortlist drawn from <strong>1,500 plus partner universities across 41 plus countries</strong>, then complete application handling, deadlines included.</p></div>
+        </article>
+        <article class="step" data-reveal>
+          <div class="stamp"><b>04</b><span>STEP</span></div>
+          <div><h3>SOP, LOR and essay guidance</h3><p>Statements of purpose, letters of recommendation and application essays shaped around the student record, in the student own voice.</p></div>
+        </article>
+        <article class="step" data-reveal>
+          <div class="stamp"><b>05</b><span>STEP</span></div>
+          <div><h3>Scholarship strategy</h3><p>Every eligible scholarship is mapped before applications go out. Our students have secured <strong>$100M plus in scholarships</strong> across destinations.</p></div>
+        </article>
+        <article class="step" data-reveal>
+          <div class="stamp"><b>06</b><span>STEP</span></div>
+          <div><h3>Visa documentation and interview preparation</h3><p>File preparation document by document, plus mock interviews before the real one. The result is a <strong>98% visa success rate</strong>.</p></div>
+        </article>
+        <article class="step" data-reveal>
+          <div class="stamp"><b>07</b><span>STEP</span></div>
+          <div><h3>Pre-departure briefing and post-arrival support</h3><p>What to pack, what to expect, whom to call. The support continues after landing, not just until the flight leaves.</p></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ITALY ================= -->
+<section class="italy-sec block" id="italy" aria-labelledby="italyH">
+  <div class="wrap">
+    <p class="sec-tag">Spotlight / HN 109, our specialty route</p>
+    <div class="italy-grid">
+      <figure class="italy-photo" data-reveal>
+        <img src="https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=1200&q=80&auto=format&fit=crop" alt="Milan Cathedral, the Duomo, photographed from the piazza in warm evening light">
+        <span class="stamp-it">Milan / MXP</span>
+        <figcaption><span>DUOMO DI MILANO, LOMBARDY</span><span>SINGLE INTAKE: SEPTEMBER</span></figcaption>
+      </figure>
+      <div class="italy-copy">
+        <h2 id="italyH" data-reveal>Italy, where the maths works.</h2>
+        <p class="lead" data-reveal>Very few consultancies in India handle Italy end to end. We do, from profile check to scholarship paperwork to the visa file. These are the verified figures we counsel with.</p>
+        <ul class="italy-facts">
+          <li data-reveal><span class="fv">16 to 500 euros</span><span class="fk">Enrolment fee only at public universities. Tuition is near zero.</span></li>
+          <li data-reveal><span class="fv">7,000 to 8,000 euros</span><span class="fk">Need based scholarships, about this much per year for eligible students.</span></li>
+          <li data-reveal><span class="fv">20 hrs / week</span><span class="fk">Part time work permitted during studies.</span></li>
+          <li data-reveal><span class="fv">1 year</span><span class="fk">Post study work visa after graduation.</span></li>
+          <li data-reveal><span class="fv">29 countries</span><span class="fk">Schengen travel across Europe on one visa.</span></li>
+          <li data-reveal><span class="fv">MOI accepted</span><span class="fk">Most universities accept a Medium of Instruction certificate. IELTS is not mandatory for most.</span></li>
+        </ul>
+        <a class="btn" href="https://wa.me/919278011092" target="_blank" rel="noopener" data-flood>Ask about Italy <span class="arr" aria-hidden="true">-&gt;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STORIES ================= -->
+<section class="block" id="stories" aria-labelledby="storiesH">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-tag">Arrivals / verified outcomes</p>
+        <h2 id="storiesH" data-reveal>Students who <span class="amber">already landed.</span></h2>
+      </div>
+      <p class="side" data-reveal>Real students, real universities, real scholarship outcomes. No invented quotes, just the record.</p>
+    </div>
+    <div class="wall">
+      <article class="story s1" data-reveal>
+        <img src="https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=1200&q=80&auto=format&fit=crop" alt="Milan Cathedral, destination city of Mohammed Areeb">
+        <div class="s-body">
+          <h3 class="s-name">Mohammed Areeb</h3>
+          <p class="s-route">LUCKNOW PUBLIC SCHOOL -&gt; UNIVERSITY OF MILAN, ITALY</p>
+          <p class="s-fact">From a Lucknow classroom to the University of Milan, with his scholarship paperwork handled end to end.</p>
+          <p class="s-badge">100% scholarship</p>
+        </div>
+      </article>
+      <article class="story s2" data-reveal>
+        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1200&q=80&auto=format&fit=crop" alt="New Zealand landscape, destination country of Pihu Malhotra">
+        <div class="s-body">
+          <h3 class="s-name">Pihu Malhotra</h3>
+          <p class="s-route">UNIVERSITY OF AUCKLAND, NEW ZEALAND</p>
+          <p class="s-fact">MSc Environmental Management at the University of Auckland. She also held an offer from the University of Queensland, ranked QS 40.</p>
+          <p class="s-badge">Offer in 2 days</p>
+        </div>
+      </article>
+      <article class="story s3" data-reveal>
+        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1200&q=80&auto=format&fit=crop" alt="Grand Canal in Venice, destination city of Tejansh Singh Rathore">
+        <div class="s-body">
+          <h3 class="s-name">Tejansh Singh Rathore</h3>
+          <p class="s-route">UNIVERSITY OF VENICE, ITALY</p>
+          <p class="s-fact">Admitted to the University of Venice on a full scholarship.</p>
+          <p class="s-badge">100% scholarship</p>
+        </div>
+      </article>
+      <article class="story s4" data-reveal>
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80&auto=format&fit=crop" alt="University students studying together on campus">
+        <div class="s-body">
+          <h3 class="s-name">Himakshi Hada</h3>
+          <p class="s-route">UNIVERSITY OF MESSINA, ITALY</p>
+          <p class="s-fact">Admitted to the University of Messina in Sicily on a full scholarship.</p>
+          <p class="s-badge">100% scholarship</p>
+        </div>
+      </article>
+      <article class="story s5" data-reveal>
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&q=80&auto=format&fit=crop" alt="Historic university campus building with students on the lawn">
+        <div class="s-body">
+          <h3 class="s-name">Manas Sharma</h3>
+          <p class="s-route">UNIVERSITY OF CASSINO, ITALY</p>
+          <p class="s-fact">Admitted to the University of Cassino, south of Rome.</p>
+          <p class="s-badge">Italy arrival</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENTOR ================= -->
+<section class="block" id="mentor" aria-labelledby="mentorH" style="padding-top:20px">
+  <div class="wrap">
+    <div class="mentor-grid">
+      <div>
+        <p class="sec-tag">The mentor / who signs off your file</p>
+        <h2 id="mentorH" data-reveal>Harsh Nawal Bhardwaj, <span class="amber">the name behind the numbers.</span></h2>
+        <p class="mentor-bio" data-reveal>Harsh Nawal Bhardwaj leads counselling at HN Overseas. He is <strong>British Council Certified</strong> and has spent <strong>more than 10 years</strong> guiding students through admissions, scholarships and visa files. In that time he has personally guided <strong>more than 4,000 students</strong>. HN Overseas has worked in study abroad for over three decades as part of the Career Point family, and every Italy and Ivy League file is reviewed against the same standard he sets: honest advice first, paperwork checked twice.</p>
+        <div style="margin-top:28px" data-reveal>
+          <a class="btn ghost" href="https://wa.me/919278011092" target="_blank" rel="noopener" data-flood>Start with a free counselling call <span class="arr" aria-hidden="true">-&gt;</span></a>
+        </div>
+      </div>
+      <div class="mentor-nums" data-reveal>
+        <div class="row"><span class="v">10<em>+</em></span><span class="k">Years of counselling<br>experience</span></div>
+        <div class="row"><span class="v">4,000<em>+</em></span><span class="k">Students guided<br>personally</span></div>
+        <div class="row"><span class="v" style="font-size:clamp(22px,2.6vw,34px)">British Council</span><span class="k">Certified<br>counsellor</span></div>
+        <div class="row"><span class="v">35<em>+</em></span><span class="k">Years, HN Overseas<br>and Career Point family</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-contact">
+        <h2>Your departure is <span class="amber">one call away.</span></h2>
+        <p>Free counselling for every destination. Talk to the UP desk, or reach the head office directly.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/919278011092" target="_blank" rel="noopener" data-flood>Book free counselling <span class="arr" aria-hidden="true">-&gt;</span></a>
+          <a class="btn ghost" href="https://www.hnoverseas.com" target="_blank" rel="noopener" data-flood>hnoverseas.com</a>
+        </div>
+      </div>
+      <div class="foot-links">
+        <div class="contact-line"><span class="k">Head office phone</span><a href="tel:+919461252003">+91-94612 52003</a></div>
+        <div class="contact-line"><span class="k">Head office email</span><a href="mailto:business.hnoverseas@gmail.com">business.hnoverseas@gmail.com</a></div>
+        <div class="contact-line"><span class="k">Website</span><a href="https://www.hnoverseas.com" target="_blank" rel="noopener">www.hnoverseas.com</a></div>
+      </div>
+      <div class="foot-honest">
+        <div class="contact-line"><span class="k">Regional Manager, UP: Sai Prabhat</span><a href="tel:+919278011092">+91 92780 11092</a></div>
+        <div class="contact-line"><span class="k">UP desk email</span><a href="mailto:sai.hnoverseas@gmail.com">sai.hnoverseas@gmail.com</a></div>
+        <div class="honest-box" style="margin-top:20px">
+          <p class="k">The honest line</p>
+          <p><strong>Counselling is free.</strong> Processing charges apply for Italy and Ivy League applications.</p>
+          <p class="stars"><b>5.0 stars</b> across 38 Google reviews</p>
+        </div>
+      </div>
+    </div>
+    <div class="wordmark" aria-hidden="true">HN <b>OVERSEAS</b></div>
+    <div class="foot-base">
+      <span>HN OVERSEAS / LUCKNOW TO THE WORLD</span>
+      <span>LKO 26.85N 80.95E</span>
+      <span>DEMO WEBSITE, VARIANT B</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+"use strict";
+var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (reduced) document.documentElement.classList.add("reduced");
+
+/* ---------------- data ---------------- */
+var LKO = { lat: 26.85, lon: 80.95 };
+var DEST = {
+  usa:        { code:"HN 101 / JFK", city:"New York", country:"USA", iata:"JFK", lat:40.71, lon:-74.00, arc:"Signal route, live", note:"The largest intake on the board, with shortlists drawn from 1,500 plus partner universities." },
+  uk:         { code:"HN 102 / LHR", city:"London", country:"UK", iata:"LHR", lat:51.50, lon:-0.12, arc:"Signal route, live", note:"London marker on the board. Shortlisting, applications and visa files handled by one team." },
+  canada:     { code:"HN 103 / YYZ", city:"Toronto", country:"Canada", iata:"YYZ", lat:43.65, lon:-79.38, arc:"Signal route, live", note:"Toronto marker on the board. Profile first: we only file where the fit is genuine." },
+  australia:  { code:"HN 104 / SYD", city:"Sydney", country:"Australia", iata:"SYD", lat:-33.86, lon:151.20, arc:"Signal route, live", note:"Sydney marker on the board, including the University of Queensland, ranked QS 40." },
+  ireland:    { code:"HN 105 / DUB", city:"Dublin", country:"Ireland", iata:"DUB", lat:53.35, lon:-6.26, arc:"Signal route, live", note:"Dublin marker on the board. English taught programmes with a European base." },
+  uae:        { code:"HN 106 / DXB", city:"Dubai", country:"UAE", iata:"DXB", lat:25.20, lon:55.27, arc:"Signal route, live", note:"The shortest hop on the board. Dubai marker, counselled like every other route: free." },
+  newzealand: { code:"HN 107 / AKL", city:"Auckland", country:"New Zealand", iata:"AKL", lat:-36.85, lon:174.76, arc:"Signal route, live", note:"Auckland marker on the board. Home of a 2 day offer turnaround for one of our students." },
+  singapore:  { code:"HN 108 / SIN", city:"Singapore", country:"Singapore", iata:"SIN", lat:1.35, lon:103.82, arc:"Signal route, live", note:"Singapore marker on the board. One city, one campus decision, full application support." },
+  italy:      { code:"HN 109 / MXP", city:"Milan", country:"Italy", iata:"MXP", lat:45.46, lon:9.19, arc:"Amber route, our specialty", note:"Near zero tuition at public universities. Scholarships of about 7,000 to 8,000 euros a year for eligible students." }
+};
+var ORDER = ["usa","uk","canada","australia","ireland","uae","newzealand","singapore","italy"];
+
+/* yearly intakes each destination offers: name, class start months, kind (main/second/limited) */
+var INTAKES = {
+  usa: [
+    { name:"Fall", months:"Aug – Sep", span:[8,9], start:8, kind:"main", tag:"Main intake", note:"The big one: the widest course choice and the largest share of scholarships." },
+    { name:"Spring", months:"Jan", span:[1], start:1, kind:"second", tag:"Second intake", note:"A second start in January, with fewer seats and courses than Fall." },
+    { name:"Summer", months:"May", span:[5], start:5, kind:"limited", tag:"Limited courses", note:"Offered by a limited set of universities and courses only." }
+  ],
+  uk: [
+    { name:"September", months:"Sep", span:[9], start:9, kind:"main", tag:"Main intake", note:"The main start of the UK academic year for most courses." },
+    { name:"January", months:"Jan", span:[1], start:1, kind:"second", tag:"Second intake", note:"A growing second start, offered mostly for postgraduate courses." },
+    { name:"May", months:"May", span:[5], start:5, kind:"limited", tag:"Limited courses", note:"A small intake at a limited number of universities." }
+  ],
+  canada: [
+    { name:"Fall", months:"Sep", span:[9], start:9, kind:"main", tag:"Main intake", note:"The main intake, with the widest programme choice across Canada." },
+    { name:"Winter", months:"Jan", span:[1], start:1, kind:"second", tag:"Second intake", note:"A January start at many colleges and universities." },
+    { name:"Spring / Summer", months:"May", span:[5], start:5, kind:"limited", tag:"Limited courses", note:"Limited programmes, offered mostly by colleges." }
+  ],
+  australia: [
+    { name:"Semester 1", months:"Feb", span:[2], start:2, kind:"main", tag:"Main intake", note:"The main start of the Australian academic year." },
+    { name:"Semester 2", months:"Jul", span:[7], start:7, kind:"main", tag:"Main intake", note:"A full second main intake, with most courses open." },
+    { name:"November", months:"Nov", span:[11], start:11, kind:"limited", tag:"Limited courses", note:"A limited summer intake at select universities." }
+  ],
+  ireland: [
+    { name:"September", months:"Sep", span:[9], start:9, kind:"main", tag:"Main intake", note:"The main intake for the Irish academic year." },
+    { name:"January", months:"Jan", span:[1], start:1, kind:"limited", tag:"Limited courses", note:"A limited second intake, mostly for postgraduate courses." }
+  ],
+  uae: [
+    { name:"September", months:"Sep", span:[9], start:9, kind:"main", tag:"Main intake", note:"The main intake for most UAE universities." },
+    { name:"January", months:"Jan", span:[1], start:1, kind:"second", tag:"Second intake", note:"A January start across many programmes." },
+    { name:"May", months:"May", span:[5], start:5, kind:"limited", tag:"Limited courses", note:"A limited spring intake at select universities." }
+  ],
+  newzealand: [
+    { name:"Semester 1", months:"Feb", span:[2], start:2, kind:"main", tag:"Main intake", note:"The main start of the New Zealand academic year." },
+    { name:"Semester 2", months:"Jul", span:[7], start:7, kind:"main", tag:"Main intake", note:"A full second main intake at most universities." },
+    { name:"November", months:"Nov", span:[11], start:11, kind:"limited", tag:"Limited courses", note:"A limited summer school intake." }
+  ],
+  singapore: [
+    { name:"August", months:"Aug", span:[8], start:8, kind:"main", tag:"Main intake", note:"The main intake for Singapore universities." },
+    { name:"January", months:"Jan", span:[1], start:1, kind:"second", tag:"Second intake", note:"A second intake at select institutions." }
+  ],
+  italy: [
+    { name:"September", months:"Sep", span:[9], start:9, kind:"main", tag:"Only intake", note:"Italy runs a single yearly intake at public universities. Applications open the previous autumn, so the file starts early." }
+  ]
+};
+
+function haversineKm(a,b){
+  var R=6371, dLat=(b.lat-a.lat)*Math.PI/180, dLon=(b.lon-a.lon)*Math.PI/180;
+  var s=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(a.lat*Math.PI/180)*Math.cos(b.lat*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);
+  return Math.round(2*R*Math.asin(Math.sqrt(s)));
+}
+function fmtIN(n){
+  var s=String(Math.round(n)), last=s.slice(-3), rest=s.slice(0,-3);
+  if(rest){ last = rest.replace(/\B(?=(\d{2})+(?!\d))/g,",") + "," + last; }
+  return last;
+}
+function fmtCoord(lat,lon){
+  return Math.abs(lat).toFixed(2)+(lat>=0?"N":"S")+" "+Math.abs(lon).toFixed(2)+(lon>=0?"E":"W");
+}
+ORDER.forEach(function(k){
+  var el=document.querySelector('[data-dist="'+k+'"]');
+  if(el) el.textContent = fmtIN(haversineKm(LKO,DEST[k]))+" KM";
+});
+
+/* ---------------- fact card ---------------- */
+var fcCode=document.getElementById("fcCode"), fcTitle=document.getElementById("fcTitle"),
+    fcRoute=document.getElementById("fcRoute"), fcDist=document.getElementById("fcDist"),
+    fcArc=document.getElementById("fcArc"), fcNote=document.getElementById("fcNote"),
+    fcStatus=document.getElementById("fcStatus"), fcIntakes=document.getElementById("fcIntakes");
+var currentDest="italy";
+function setFactCard(key, animate){
+  var d=DEST[key]; if(!d) return;
+  currentDest=key;
+  function apply(){
+    fcCode.textContent=d.code;
+    fcTitle.innerHTML=d.city+' <span>/ '+d.country+'</span>';
+    fcRoute.innerHTML="LKO 26.85N 80.95E &nbsp;-&gt;&nbsp; "+d.iata+" "+fmtCoord(d.lat,d.lon);
+    fcDist.textContent=fmtIN(haversineKm(LKO,d))+" km";
+    fcArc.textContent=d.arc;
+    fcNote.innerHTML=d.note.replace(/(\$100M plus|7,000 to 8,000 euros a year|QS 40|2 day)/g,"<strong>$1</strong>");
+    fcStatus.textContent = key==="italy" ? "Boarding" : "On time";
+    if(fcIntakes && INTAKES[key]){
+      fcIntakes.textContent = INTAKES[key].length===1
+        ? INTAKES[key][0].name+" only"
+        : INTAKES[key].map(function(it){ return it.name; }).join(" · ");
+    }
+  }
+  if(animate && window.gsap && !reduced){
+    gsap.to(".fact-card",{opacity:0,y:8,duration:.22,ease:"power2.in",onComplete:function(){
+      apply();
+      gsap.to(".fact-card",{opacity:1,y:0,duration:.5,ease:"expo.out"});
+    }});
+  } else apply();
+  document.querySelectorAll(".dep-chip").forEach(function(c){ c.classList.toggle("active", c.getAttribute("data-dest")===key); });
+  document.querySelectorAll(".dest-row").forEach(function(r){ r.classList.toggle("active", r.getAttribute("data-dest")===key); });
+}
+
+/* ---------------- button flood origin ---------------- */
+document.querySelectorAll("[data-flood]").forEach(function(btn){
+  btn.addEventListener("pointerenter",function(e){
+    var r=btn.getBoundingClientRect();
+    btn.style.setProperty("--o", (e.clientX-r.left > r.width/2 ? "right" : "left")+" center");
+  });
+  btn.addEventListener("pointerleave",function(e){
+    var r=btn.getBoundingClientRect();
+    btn.style.setProperty("--o", (e.clientX-r.left > r.width/2 ? "right" : "left")+" center");
+  });
+});
+/* smooth anchors through Lenis when present */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener("click",function(e){
+    var id=a.getAttribute("href");
+    if(id.length<2) return;
+    var target=document.querySelector(id);
+    if(!target) return;
+    e.preventDefault();
+    if(window.__lenis) window.__lenis.scrollTo(target,{offset:-70,duration:1.3});
+    else target.scrollIntoView({behavior: reduced?"auto":"smooth"});
+  });
+});
+
+/* ---------------- loader ---------------- */
+var loader=document.getElementById("loader"), loadBar=document.getElementById("loadBar"),
+    loadPct=document.getElementById("loadPct"), loadMsg=document.getElementById("loadMsg");
+var msgs=["Checking the board","Plotting arcs from Lucknow","Loading destinations","Boarding"];
+var lp={v:0};
+function finishLoad(){
+  if(loader.classList.contains("done")) return;
+  loader.classList.add("done");
+  document.body.classList.remove("loading");
+  setTimeout(function(){ loader.style.display="none"; },800);
+  heroIntro();
+}
+if(window.gsap && !reduced){
+  gsap.to(lp,{v:100,duration:1.5,ease:"expo.out",onUpdate:function(){
+    var p=Math.round(lp.v);
+    loadPct.textContent=p+"%";
+    loadBar.style.transform="scaleX("+(lp.v/100)+")";
+    loadMsg.textContent=msgs[Math.min(msgs.length-1, Math.floor(p/30))];
+  },onComplete:finishLoad});
+  setTimeout(finishLoad,2600);
+} else {
+  loadPct.textContent="100%"; loadBar.style.transform="scaleX(1)"; finishLoad();
+}
+
+/* ---------------- hero intro + reveals ---------------- */
+var introDone=false;
+function heroIntro(){
+  if(introDone) return; introDone=true;
+  if(!window.gsap || reduced){
+    document.querySelectorAll("[data-intro-line]").forEach(function(el){ el.style.transform="none"; });
+    return;
+  }
+  gsap.fromTo("[data-intro-line]",{yPercent:110},{yPercent:0,duration:1.25,ease:"expo.out",stagger:0.08,delay:0.1});
+  gsap.fromTo(".hero-sub,.hero-actions",{opacity:0,y:22},{opacity:1,y:0,duration:1.1,ease:"expo.out",stagger:0.09,delay:0.45});
+  gsap.fromTo(".fact-card",{opacity:0,y:26},{opacity:1,y:0,duration:1.1,ease:"expo.out",delay:0.6});
+  gsap.fromTo(".dep-chip",{opacity:0,y:14},{opacity:1,y:0,duration:0.8,ease:"expo.out",stagger:0.05,delay:0.7,clearProps:"transform"});
+}
+if(window.gsap && !reduced){
+  gsap.set("[data-intro-line]",{yPercent:110});
+}
+
+/* Lenis + one GSAP clock */
+var lenis=null;
+if(window.Lenis && window.gsap && !reduced){
+  lenis=new Lenis({ duration:1.15, easing:function(t){return 1-Math.pow(1-t,4);} });
+  window.__lenis=lenis;
+  lenis.on("scroll", function(){ if(window.ScrollTrigger) ScrollTrigger.update(); });
+  gsap.ticker.add(function(time){ lenis.raf(time*1000); });
+  gsap.ticker.lagSmoothing(0);
+}
+if(window.gsap && window.ScrollTrigger){
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll("[data-reveal]").forEach(function(el,i){
+    if(reduced){ el.style.opacity=1; el.style.transform="none"; return; }
+    gsap.to(el,{opacity:1,y:0,duration:1.15,ease:"expo.out",
+      scrollTrigger:{trigger:el,start:"top 88%",once:true}, delay:(i%3)*0.07});
+  });
+} else {
+  document.querySelectorAll("[data-reveal]").forEach(function(el){ el.style.opacity=1; el.style.transform="none"; });
+}
+
+/* counters */
+var counted=false;
+var statsSec=document.querySelector(".stats");
+function runCounters(){
+  if(counted) return; counted=true;
+  document.querySelectorAll("[data-count]").forEach(function(el){
+    var target=parseFloat(el.getAttribute("data-count"));
+    var indian=el.getAttribute("data-format")==="in";
+    if(!window.gsap || reduced){ el.textContent = indian?fmtIN(target):String(target); return; }
+    var o={v:0};
+    gsap.to(o,{v:target,duration:1.8,ease:"expo.out",onUpdate:function(){
+      el.textContent = indian?fmtIN(o.v):String(Math.round(o.v));
+    },onComplete:function(){ el.textContent = indian?fmtIN(target):String(target); }});
+  });
+}
+if("IntersectionObserver" in window && statsSec){
+  var so=new IntersectionObserver(function(en){ if(en[0].isIntersecting){ runCounters(); so.disconnect(); } },{threshold:0.3});
+  so.observe(statsSec);
+} else runCounters();
+
+/* ---------------- yearly intakes board ---------------- */
+var intakeRowsEl=document.getElementById("intakeRows"),
+    intakeCardsEl=document.getElementById("intakeCards"),
+    idTitle=document.getElementById("idTitle"),
+    idNext=document.getElementById("idNext"),
+    intakeChoice=document.getElementById("intakeChoice"),
+    intakeCta=document.getElementById("intakeCta");
+var chosenIntakeIdx=0;
+var MONTHS_SHORT=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function intakeYearFor(it){
+  var now=new Date(), m=now.getMonth()+1, y=now.getFullYear();
+  return it.start>=m ? y : y+1;
+}
+function nextIntakeOf(list){
+  var best=null;
+  list.forEach(function(it){
+    var y=intakeYearFor(it), key=y*100+it.start;
+    if(!best || key<best.key) best={it:it, year:y, key:key};
+  });
+  return best;
+}
+function kindForMonth(list, month){
+  var rank={main:3, second:2, limited:1}, best=null, bestRank=0;
+  list.forEach(function(it){
+    if(it.span.indexOf(month)>-1 && rank[it.kind]>bestRank){ best=it.kind; bestRank=rank[it.kind]; }
+  });
+  return best;
+}
+function buildIntakeRows(){
+  if(!intakeRowsEl) return;
+  ORDER.forEach(function(key){
+    var d=DEST[key], list=INTAKES[key];
+    var row=document.createElement("button");
+    row.type="button";
+    row.className="intake-row"+(key===currentDest?" active":"");
+    row.setAttribute("data-intake-dest",key);
+    row.setAttribute("aria-label", d.country+" intakes: "+list.map(function(it){return it.name+" ("+it.months+")";}).join(", "));
+    var html='<span class="ir-name">'+d.country+'<small>'+d.code.split(" / ")[0]+'</small></span>';
+    for(var m=1;m<=12;m++){
+      var kind=kindForMonth(list,m);
+      html+='<span class="cell">'+(kind?'<span class="dot '+kind+'"></span>':'')+'</span>';
+    }
+    row.innerHTML=html;
+    row.addEventListener("click",function(){ pickDestination(key,false); });
+    intakeRowsEl.appendChild(row);
+  });
+}
+function updateIntakeChoice(key){
+  var d=DEST[key], list=INTAKES[key], it=list[chosenIntakeIdx]||list[0];
+  if(!it) return;
+  var yr=intakeYearFor(it);
+  intakeChoice.innerHTML="On your board: <strong>"+d.country+" · "+it.name+" intake "+yr+"</strong> — classes begin "+it.months+". Start your file 9 to 12 months ahead; counselling is free.";
+  intakeCta.href="https://wa.me/919278011092?text="+encodeURIComponent("Hi HN Overseas, I want to plan for the "+it.name+" intake ("+it.months+" "+yr+") in "+d.country+". Please guide me on the next steps.");
+}
+function syncIntakes(key){
+  var d=DEST[key], list=INTAKES[key];
+  if(!d || !list) return;
+  document.querySelectorAll(".intake-row").forEach(function(r){
+    r.classList.toggle("active", r.getAttribute("data-intake-dest")===key);
+  });
+  if(idTitle) idTitle.innerHTML=d.city+' <span>/ '+d.country+' intakes</span>';
+  var nx=nextIntakeOf(list);
+  if(idNext && nx) idNext.innerHTML="Next up: <b>"+nx.it.name+" · "+MONTHS_SHORT[nx.it.start-1]+" "+nx.year+"</b>";
+  chosenIntakeIdx=0;
+  for(var i=0;i<list.length;i++){ if(list[i].kind==="main"){ chosenIntakeIdx=i; break; } }
+  if(intakeCardsEl){
+    intakeCardsEl.innerHTML="";
+    list.forEach(function(it, idx){
+      var card=document.createElement("button");
+      card.type="button";
+      card.className="intake-card"+(idx===chosenIntakeIdx?" sel":"");
+      card.setAttribute("aria-pressed", idx===chosenIntakeIdx?"true":"false");
+      card.innerHTML='<span class="ic-name">'+it.name+' intake</span>'
+        +'<span class="ic-months">Classes begin '+it.months+'</span>'
+        +'<span class="ic-tag">'+it.tag+'</span>'
+        +'<span class="ic-note">'+it.note+'</span>';
+      card.addEventListener("click",function(){
+        chosenIntakeIdx=idx;
+        intakeCardsEl.querySelectorAll(".intake-card").forEach(function(c,j){
+          c.classList.toggle("sel", j===idx);
+          c.setAttribute("aria-pressed", j===idx?"true":"false");
+        });
+        updateIntakeChoice(key);
+      });
+      intakeCardsEl.appendChild(card);
+    });
+  }
+  updateIntakeChoice(key);
+}
+
+/* ---------------- destination interactions ---------------- */
+var thumb=document.getElementById("destThumb");
+var THUMBS={
+  usa:"https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1200&q=80&auto=format&fit=crop",
+  uk:"https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80&auto=format&fit=crop",
+  canada:"https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1200&q=80&auto=format&fit=crop",
+  australia:"https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1200&q=80&auto=format&fit=crop",
+  ireland:"https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200&q=80&auto=format&fit=crop",
+  uae:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80&auto=format&fit=crop",
+  newzealand:"https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1200&q=80&auto=format&fit=crop",
+  singapore:"https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&q=80&auto=format&fit=crop",
+  italy:"https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=1200&q=80&auto=format&fit=crop"
+};
+function pickDestination(key, scroll){
+  setFactCard(key, true);
+  syncIntakes(key);
+  if(window.__flyTo) window.__flyTo(key);
+  if(scroll){
+    var hero=document.getElementById("top");
+    var rect=hero.getBoundingClientRect();
+    if(rect.bottom < window.innerHeight*0.4){
+      if(lenis) lenis.scrollTo(0,{duration:1.4});
+      else window.scrollTo({top:0,behavior: reduced?"auto":"smooth"});
+    }
+  }
+}
+document.querySelectorAll(".dep-chip").forEach(function(chip){
+  chip.addEventListener("click",function(){ pickDestination(chip.getAttribute("data-dest"), false); });
+});
+document.querySelectorAll(".dest-row").forEach(function(row){
+  var key=row.getAttribute("data-dest");
+  row.addEventListener("click",function(){ pickDestination(key, true); });
+  row.addEventListener("pointerenter",function(e){
+    if(window.matchMedia("(hover: none)").matches) return;
+    thumb.src=THUMBS[key]; thumb.classList.add("show");
+  });
+  row.addEventListener("pointermove",function(e){
+    thumb.style.left=Math.min(window.innerWidth-320, e.clientX+26)+"px";
+    thumb.style.top=Math.max(10, e.clientY-100)+"px";
+  });
+  row.addEventListener("pointerleave",function(){ thumb.classList.remove("show"); });
+});
+
+/* ---------------- globe ---------------- */
+var wrap=document.getElementById("globeWrap");
+var canvas=document.getElementById("globeCanvas");
+var globeVisible=true, flyToFn=null;
+
+function latLonToVec3(lat,lon,R){
+  var la=lat*Math.PI/180, lo=lon*Math.PI/180;
+  return new THREE.Vector3(R*Math.cos(la)*Math.sin(lo), R*Math.sin(la), R*Math.cos(la)*Math.cos(lo));
+}
+function initGlobe(){
+  if(!window.THREE) throw new Error("three missing");
+  var renderer=new THREE.WebGLRenderer({canvas:canvas, antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(38,1,0.1,100);
+  camera.position.set(0,0,4.4);
+  var group=new THREE.Group();
+  group.rotation.order="YXZ";
+  scene.add(group);
+  var R=1.35;
+
+  /* dotted sphere, fibonacci */
+  var N=2500, pos=new Float32Array(N*3), phiA=Math.PI*(3-Math.sqrt(5));
+  for(var i=0;i<N;i++){
+    var y=1-(i/(N-1))*2, rad=Math.sqrt(Math.max(0,1-y*y)), th=phiA*i;
+    pos[i*3]=Math.cos(th)*rad*R; pos[i*3+1]=y*R; pos[i*3+2]=Math.sin(th)*rad*R;
+  }
+  var dotGeo=new THREE.BufferGeometry();
+  dotGeo.setAttribute("position", new THREE.BufferAttribute(pos,3));
+  var dots=new THREE.Points(dotGeo, new THREE.PointsMaterial({color:0x6E93B8,size:0.016,transparent:true,opacity:0.85,sizeAttenuation:true}));
+  group.add(dots);
+  var shell=new THREE.Mesh(new THREE.SphereGeometry(R*0.995,48,48), new THREE.MeshBasicMaterial({color:0x0B1220,transparent:true,opacity:0.55}));
+  group.add(shell);
+
+  /* Lucknow marker */
+  function addMarker(lat,lon,color,size){
+    var g=new THREE.Group();
+    var core=new THREE.Mesh(new THREE.SphereGeometry(size,16,16), new THREE.MeshBasicMaterial({color:color}));
+    var halo=new THREE.Mesh(new THREE.SphereGeometry(size*2.4,16,16), new THREE.MeshBasicMaterial({color:color,transparent:true,opacity:0.22}));
+    g.add(halo); g.add(core);
+    g.position.copy(latLonToVec3(lat,lon,R*1.005));
+    g.userData.baseSize=size;
+    group.add(g);
+    return g;
+  }
+  var lkoMarker=addMarker(LKO.lat,LKO.lon,0xE9EEF5,0.02);
+  var markers={};
+  ORDER.forEach(function(k){
+    var d=DEST[k];
+    markers[k]=addMarker(d.lat,d.lon, k==="italy"?0xF0A832:0x7CC4FF, k==="italy"?0.024:0.019);
+    markers[k].userData.dest=k;
+  });
+
+  /* arcs */
+  var arcPulses=[];
+  ORDER.forEach(function(k){
+    var d=DEST[k];
+    var a=latLonToVec3(LKO.lat,LKO.lon,R), b=latLonToVec3(d.lat,d.lon,R);
+    var dist=a.distanceTo(b);
+    var mid=a.clone().add(b).multiplyScalar(0.5).normalize().multiplyScalar(R+dist*0.32);
+    var curve=new THREE.QuadraticBezierCurve3(a,mid,b);
+    var pts=curve.getPoints(64);
+    var geo=new THREE.BufferGeometry().setFromPoints(pts);
+    var mat=new THREE.LineBasicMaterial({color: k==="italy"?0xF0A832:0x7CC4FF, transparent:true, opacity: k==="italy"?0.95:0.4});
+    group.add(new THREE.Line(geo,mat));
+    var pulse=new THREE.Mesh(new THREE.SphereGeometry(0.013,10,10), new THREE.MeshBasicMaterial({color: k==="italy"?0xF0A832:0xBFE3FF}));
+    group.add(pulse);
+    arcPulses.push({curve:curve, mesh:pulse, off: ORDER.indexOf(k)/ORDER.length, speed: k==="italy"?0.14:0.09});
+  });
+
+  /* state + interaction */
+  var autoSpeed = reduced?0:0.045;
+  var targetRX = DEST.italy.lat*Math.PI/180*0.72;
+  var targetRY = -DEST.italy.lon*Math.PI/180;
+  group.rotation.x=targetRX; group.rotation.y=targetRY;
+  var dragging=false, px=0, py=0, idleTimer=0, userHold=false;
+
+  flyToFn=function(key){
+    var d=DEST[key]; if(!d) return;
+    var ty=-d.lon*Math.PI/180, tx=d.lat*Math.PI/180*0.72;
+    var twoPi=Math.PI*2;
+    while(ty - group.rotation.y > Math.PI) ty-=twoPi;
+    while(ty - group.rotation.y < -Math.PI) ty+=twoPi;
+    userHold=true; idleTimer=0;
+    if(window.gsap && !reduced){
+      gsap.to(group.rotation,{y:ty,x:tx,duration:1.6,ease:"expo.out"});
+    } else { group.rotation.y=ty; group.rotation.x=tx; }
+  };
+  window.__flyTo=flyToFn;
+
+  canvas.addEventListener("pointerdown",function(e){ dragging=true; px=e.clientX; py=e.clientY; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener("pointermove",function(e){
+    if(!dragging) return;
+    var dx=e.clientX-px, dy=e.clientY-py; px=e.clientX; py=e.clientY;
+    group.rotation.y+=dx*0.005;
+    group.rotation.x=Math.max(-1.1,Math.min(1.1, group.rotation.x+dy*0.003));
+    userHold=true; idleTimer=0;
+  });
+  ["pointerup","pointercancel"].forEach(function(ev){ canvas.addEventListener(ev,function(){ dragging=false; }); });
+
+  /* marker picking */
+  var ray=new THREE.Raycaster(), mouse=new THREE.Vector2(), downPos=null;
+  canvas.addEventListener("pointerdown",function(e){ downPos=[e.clientX,e.clientY]; });
+  canvas.addEventListener("pointerup",function(e){
+    if(!downPos) return;
+    var moved=Math.hypot(e.clientX-downPos[0], e.clientY-downPos[1]); downPos=null;
+    if(moved>6) return;
+    var r=canvas.getBoundingClientRect();
+    mouse.x=((e.clientX-r.left)/r.width)*2-1;
+    mouse.y=-((e.clientY-r.top)/r.height)*2+1;
+    ray.setFromCamera(mouse,camera);
+    var objs=ORDER.map(function(k){return markers[k];});
+    var hits=ray.intersectObjects(objs,true);
+    if(hits.length){
+      var o=hits[0].object;
+      while(o && !o.userData.dest) o=o.parent;
+      if(o && o.userData.dest) pickDestination(o.userData.dest,false);
+    }
+  });
+
+  function resize(){
+    var w=wrap.clientWidth, h=wrap.clientHeight;
+    if(!w||!h) return;
+    renderer.setSize(w,h,false);
+    camera.aspect=w/h; camera.updateProjectionMatrix();
+    var s = w<760 ? 0.86 : 1;
+    group.scale.setScalar(s);
+    group.position.x = w<760 ? 0 : w*0.0000 + 0.62;
+    group.position.y = w<760 ? 0.42 : 0.12;
+  }
+  window.addEventListener("resize",resize);
+  resize();
+
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(en){ globeVisible=en[0].isIntersecting; },{threshold:0.02}).observe(wrap);
+  }
+
+  var clock={t:0};
+  if(window.gsap){
+    gsap.ticker.add(function(){
+      if(!globeVisible) return;
+      var dt=Math.min(gsap.ticker.deltaRatio(60)/60,0.05);
+      clock.t+=dt;
+      if(!dragging && !reduced){
+        idleTimer+=dt;
+        if(idleTimer>3.5) userHold=false;
+        if(!userHold) group.rotation.y+=autoSpeed*dt;
+      }
+      var p=1+Math.sin(clock.t*2.4)*0.18;
+      lkoMarker.scale.setScalar(p);
+      ORDER.forEach(function(k,i){
+        var m=markers[k];
+        var s=(k===currentDest)? 1.55+Math.sin(clock.t*3)*0.15 : 1;
+        m.scale.setScalar(s);
+      });
+      arcPulses.forEach(function(ap){
+        var u=(clock.t*ap.speed+ap.off)%1;
+        ap.mesh.position.copy(ap.curve.getPoint(u));
+        ap.mesh.material.opacity=1;
+      });
+      renderer.render(scene,camera);
+    });
+  } else {
+    renderer.render(scene,camera);
+  }
+}
+try{
+  initGlobe();
+}catch(err){
+  wrap.classList.add("no-webgl");
+}
+
+/* initial card + intake board (no animation) */
+buildIntakeRows();
+setFactCard("italy", false);
+syncIntakes("italy");
+})();
+</script>
+</body>
+</html>
