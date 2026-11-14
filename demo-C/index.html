@@ -751,24 +751,21 @@
   }
   .enquiry-card h3{ font-size:clamp(1.4rem,2.2vw,1.8rem); font-weight:600; letter-spacing:-.02em; }
   .enquiry-card .ec-sub{ color:var(--muted); margin-top:8px; font-weight:500; max-width:52ch; }
-  .enquiry-form{ margin-top:26px; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-  .field{ display:flex; flex-direction:column; gap:7px; }
-  .field.full{ grid-column:1 / -1; }
-  .field label{ font-weight:600; font-size:15px; }
-  .field input,.field select,.field textarea{
-    font:inherit; font-size:16px; color:var(--ink); background:var(--paper);
-    border:1.5px solid var(--line); border-radius:10px; padding:12px 14px; width:100%; box-sizing:border-box;
+  .google-form-wrap{
+    margin-top:24px; border:1px solid var(--line); border-radius:12px;
+    overflow:hidden; background:#EEF1FF;
   }
-  .field textarea{ min-height:96px; resize:vertical; }
-  .field input:focus,.field select:focus,.field textarea:focus{ border-color:var(--amber); outline:3px solid var(--accent-soft); outline-offset:1px; }
-  .enquiry-submit{ grid-column:1 / -1; justify-self:start; }
-  .enquiry-alt{ grid-column:1 / -1; color:var(--muted); font-size:14.5px; font-weight:500; }
+  .google-form-wrap iframe{
+    display:block; width:100%; height:1220px; border:0; background:#FFFFFF;
+  }
+  .enquiry-reassurance{ margin-top:16px; font-weight:600; font-size:15.5px; color:var(--ink); }
+  .enquiry-alt{ margin-top:10px; color:var(--muted); font-size:14.5px; font-weight:500; }
   .enquiry-alt a{ color:var(--teal-text); font-weight:600; }
   @media (max-width:1100px){
     .book-side{ grid-column:1 / span 12; }
     .enquiry-card{ grid-column:1 / span 12; margin-top:40px; }
   }
-  @media (max-width:560px){ .enquiry-form{ grid-template-columns:1fr; } .enquiry-submit{ justify-self:stretch; justify-content:center; } }
+  @media (max-width:560px){ .google-form-wrap iframe{ height:1300px; } .enquiry-card{ padding:20px 16px 24px; } }
 
   /* ---------- Legal (privacy & terms) ---------- */
   .legal{ padding-block:clamp(40px,5vw,64px); }
@@ -1457,7 +1454,7 @@
     <div class="wrap">
       <div class="sec-head" data-reveal>
         <h2 class="display" id="book-h">Book free counselling</h2>
-        <p>Fill this in and it opens WhatsApp with your details already written — just press send. Nothing is charged for this conversation, and nothing is signed.</p>
+        <p>Fill in the form below and your enquiry goes straight to our team. Nothing is charged for this conversation, and nothing is signed.</p>
       </div>
       <div class="grid book-grid">
         <div class="book-side" data-reveal>
@@ -1481,49 +1478,12 @@
         </div>
         <div class="enquiry-card" data-reveal>
           <h3>Tell us where you are starting from</h3>
-          <p class="ec-sub">Four quick details. On submit, WhatsApp opens to +91 92780 11092 with your enquiry ready to send.</p>
-          <form class="enquiry-form" id="enquiryForm">
-            <div class="field">
-              <label for="enqName">Your name</label>
-              <input id="enqName" name="name" type="text" autocomplete="name" required placeholder="Full name" />
-            </div>
-            <div class="field">
-              <label for="enqPhone">Phone / WhatsApp number</label>
-              <input id="enqPhone" name="phone" type="tel" autocomplete="tel" required placeholder="e.g. 98XXX XXXXX" />
-            </div>
-            <div class="field">
-              <label for="enquiryCountry">Country you are considering</label>
-              <select id="enquiryCountry" name="country">
-                <option value="usa">USA</option>
-                <option value="uk">UK</option>
-                <option value="canada">Canada</option>
-                <option value="australia">Australia</option>
-                <option value="ireland">Ireland</option>
-                <option value="uae">UAE</option>
-                <option value="nz">New Zealand</option>
-                <option value="singapore">Singapore</option>
-                <option value="italy" selected>Italy</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="enqLevel">Level</label>
-              <select id="enqLevel" name="level">
-                <option value="Undergraduate (UG)">Undergraduate (UG)</option>
-                <option value="Postgraduate (PG)">Postgraduate (PG)</option>
-                <option value="MBBS">MBBS</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-            </div>
-            <div class="field full">
-              <label for="enqMsg">Anything we should know? <span style="color:var(--muted); font-weight:500">(optional)</span></label>
-              <textarea id="enqMsg" name="message" placeholder="Your course, marks, preferred intake — anything that helps"></textarea>
-            </div>
-            <button class="btn btn-primary enquiry-submit" type="submit">
-              Send on WhatsApp
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-7 7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <p class="enquiry-alt">No form needed if you prefer — message us directly on <a href="https://wa.me/919278011092" target="_blank" rel="noopener">WhatsApp +91 92780 11092</a>. Your details are used only to respond to this enquiry — see our <a href="#privacy">Privacy Policy</a>.</p>
-          </form>
+          <p class="ec-sub">Takes about a minute — your name, phone number, the country you are considering and your level. Your answers go straight to our counselling team.</p>
+          <div class="google-form-wrap">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchDn511GPZdAELMwKmXRT2ffN60cVm3FL5ZHdI3wRff9IJXA/viewform?embedded=true" title="HN Overseas — Book free counselling enquiry form" loading="lazy" width="100%" height="1220" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
+          <p class="enquiry-reassurance">Your details go straight to our team — we reply within one working day.</p>
+          <p class="enquiry-alt">Prefer to talk first? Message us directly on <a href="https://wa.me/919278011092" target="_blank" rel="noopener">WhatsApp +91 92780 11092</a>. Your details are used only to respond to this enquiry — see our <a href="#privacy">Privacy Policy</a>.</p>
         </div>
       </div>
     </div>
@@ -1995,42 +1955,10 @@
     renderIntakes(key, animate);
     renderCosts(key, animate);
     if (heroCostsLabel) heroCostsLabel.textContent = "See " + INTAKES[key].name + " costs";
-    var ecSync = document.getElementById("enquiryCountry");
-    if (ecSync && ecSync.value !== key) ecSync.value = key;
   }
 
-  /* ---------------- Enquiry form -> WhatsApp ----------------
-     Static page: the form opens WhatsApp to Sai's number with the
-     student's details as one structured, prefilled message. */
-  var enquiryForm = document.getElementById("enquiryForm");
-  var enquiryCountryEl = document.getElementById("enquiryCountry");
-  if (enquiryCountryEl) {
-    enquiryCountryEl.addEventListener("change", function () {
-      if (INTAKES[enquiryCountryEl.value]) selectCountry(enquiryCountryEl.value, false);
-    });
-  }
-  if (enquiryForm) {
-    enquiryForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var name = document.getElementById("enqName").value.trim();
-      var phone = document.getElementById("enqPhone").value.trim();
-      var countryKey = enquiryCountryEl ? enquiryCountryEl.value : "italy";
-      var countryName = INTAKES[countryKey] ? INTAKES[countryKey].name : countryKey;
-      var level = document.getElementById("enqLevel").value;
-      var msg = document.getElementById("enqMsg").value.trim();
-      if (!name || !phone) return;
-      var lines = [
-        "Hello HN Overseas, I would like to book free counselling.",
-        "",
-        "Name: " + name,
-        "Phone / WhatsApp: " + phone,
-        "Country: " + countryName,
-        "Level: " + level
-      ];
-      if (msg) lines.push("Message: " + msg);
-      window.open("https://wa.me/919278011092?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
-    });
-  }
+  /* Enquiry form: embedded Google Form (see #book) — responses are
+     collected in Google Sheets by Google; no page-side submit handler. */
 
   /* Destination rows pick the country too (Europe maps to Italy) */
   var DEST_KEY = { "USA": "usa", "UK": "uk", "Canada": "canada", "Australia": "australia", "Ireland": "ireland", "UAE": "uae", "New Zealand": "nz", "Singapore": "singapore", "Europe": "italy" };
