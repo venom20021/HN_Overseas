@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>HN Overseas | Your International Education Anchor</title>
+<title>HN Overseas | Study Abroad, Honestly Guided</title>
 <meta name="description" content="HN Overseas, India's study abroad consultancy since 1985: free counselling, honest costs for every destination, scholarships and visa support across nine destinations." />
 <link rel="canonical" href="https://www.hnoverseas.com/" />
 <meta name="theme-color" content="#1404D9" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="HN Overseas | Your International Education Anchor" />
-<meta property="og:description" content="Educate, Elevate, Empower. Free counselling for study in nine countries — the right course, at the right time, with every cost in writing." />
+<meta property="og:title" content="HN Overseas | Study Abroad, Honestly Guided" />
+<meta property="og:description" content="Free counselling, honest numbers, and a plan from home to your classroom abroad. Costs for every destination, scholarships and visa support, laid out in the open." />
 <meta property="og:image" content="https://www.hnoverseas.com/assets/students-1.jpg" />
 <meta property="og:site_name" content="HN Overseas" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -17,7 +17,9 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,11 +69,61 @@
   ]
 }
 </script>
-  <script type="module" crossorigin src="/v2/assets/index-GtRzCel9.js"></script>
-  <link rel="stylesheet" crossorigin href="/v2/assets/index-CmnqzPD_.css">
+
+<noscript><style>.loader{display:none}</style></noscript>
+<noscript><style>.loader{display:none}</style></noscript>
+  <script type="module" crossorigin src="/v2/assets/index-BSjlvKwY.js"></script>
+  <link rel="stylesheet" crossorigin href="/v2/assets/index-CUU7JKP1.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <img class="loader-logo" src="logo-mark.jpg" alt="" width="366" height="366" />
+    <p class="loader-mark">HN Overseas<span class="dot">.</span></p>
+    <p class="loader-sub">Study abroad, honestly guided</p>
+  </div>
+  <p class="loader-count"><span id="loadNum">0</span><small> / 100</small></p>
+  <div class="loader-bar" id="loadBar"></div>
+</div>
+
+<script>
+/* Loader dismissal is purely time-based: it never waits on fonts, images,
+   CDN scripts or the window load event. Hard cap 2.4s from parse. */
+(function () {
+  var loader = document.getElementById("loader");
+  if (!loader) { window.__hnLoaderGone = true; return; }
+  var done = false;
+  var num = document.getElementById("loadNum");
+  var bar = document.getElementById("loadBar");
+  function dismiss() {
+    if (done) return;
+    done = true;
+    window.__hnLoaderGone = true;
+    if (num) num.textContent = "100";
+    if (bar) bar.style.width = "100%";
+    loader.classList.add("done");
+    setTimeout(function () { if (loader.parentNode) loader.parentNode.removeChild(loader); }, 950);
+  }
+  window.__hnDismissLoader = dismiss;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    done = true;
+    window.__hnLoaderGone = true;
+    if (loader.parentNode) loader.parentNode.removeChild(loader);
+    return;
+  }
+  var start = Date.now();
+  var iv = setInterval(function () {
+    var p = Math.min(1, (Date.now() - start) / 1250);
+    if (num) num.textContent = Math.round(p * 100);
+    if (bar) bar.style.width = (p * 100) + "%";
+    if (p >= 1) clearInterval(iv);
+  }, 40);
+  document.addEventListener("DOMContentLoaded", function () { setTimeout(dismiss, 1300); });
+  setTimeout(dismiss, 2400);
+})();
+</script>
 <div id="root"></div>
 </body>
 </html>
