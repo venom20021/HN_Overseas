@@ -1,1 +1,0 @@
-import{S as e,x as t}from"./ChatWidget-Dn0sdcUD.js";import{n,t as r}from"./data-BJIa7zLo.js";var i=e(),a=t();(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.usa}));
