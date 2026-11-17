@@ -1,0 +1,1 @@
+import{S as e,x as t}from"./ChatWidget-C5OAobS4.js";import{n,t as r}from"./data-Cqt1Pxb2.js";var i=e(),a=t();(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.australia}));
