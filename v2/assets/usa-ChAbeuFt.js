@@ -1,1 +1,0 @@
-import{l as e,u as t}from"./navMemory-CbdJEHDG.js";import{n}from"./PageApp-DB32LMnQ.js";import{t as r}from"./data-CP1UwG8V.js";var i=t(),a=e();(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.usa}));
