@@ -72,10 +72,10 @@
 
 <noscript><style>.loader{display:none}</style></noscript>
 <noscript><style>.loader{display:none}</style></noscript>
-  <script type="module" crossorigin src="/v2/assets/main-C-pmV86b.js"></script>
-  <link rel="modulepreload" crossorigin href="/v2/assets/Backdrop-DgBCmq7M.js">
+  <script type="module" crossorigin src="/v2/assets/main-BCFn3SfW.js"></script>
+  <link rel="modulepreload" crossorigin href="/v2/assets/navMemory-CbdJEHDG.js">
   <link rel="modulepreload" crossorigin href="/v2/assets/students-classroom-Bu102cTU.js">
-  <link rel="stylesheet" crossorigin href="/v2/assets/Backdrop-C8O9zZU-.css">
+  <link rel="stylesheet" crossorigin href="/v2/assets/navMemory-CsptsClR.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -109,6 +109,24 @@
     setTimeout(function () { if (loader.parentNode) loader.parentNode.removeChild(loader); }, 950);
   }
   window.__hnDismissLoader = dismiss;
+  /* Session gate (user's phone review, 19 Nov 2026): the splash
+     shows on the FIRST entry of a session only. A returning
+     visitor — browser back, or a link back home — skips it
+     entirely and lands on the page itself. The flag is set when
+     the loader first runs, so a fresh session always gets the
+     splash exactly once. Storage failures (private mode) fall
+     back to the old always-show behaviour. */
+  try {
+    if (window.sessionStorage) {
+      if (sessionStorage.getItem("hn-visited")) {
+        done = true;
+        window.__hnLoaderGone = true;
+        if (loader.parentNode) loader.parentNode.removeChild(loader);
+        return;
+      }
+      sessionStorage.setItem("hn-visited", "1");
+    }
+  } catch (err) { /* storage unavailable — the loader runs as before */ }
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     done = true;
     window.__hnLoaderGone = true;
