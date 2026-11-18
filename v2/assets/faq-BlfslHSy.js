@@ -1,1 +1,0 @@
-import{C as e,S as t}from"./Backdrop-CdZroqMe.js";import{n,t as r}from"./data-HMZztOPs.js";var i=e(),a=t();(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.faq}));
