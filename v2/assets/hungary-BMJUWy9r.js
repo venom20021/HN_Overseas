@@ -1,0 +1,1 @@
+import{c as e,s as t}from"./Backdrop-DgBCmq7M.js";import{n}from"./PageApp-BxJO117u.js";import{t as r}from"./data-DILwuOBo.js";var i=e(),a=t();window.__HN_PAGE__=`hungary`,(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.hungary}));
