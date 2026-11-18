@@ -1,1 +1,0 @@
-import{T as e,w as t}from"./ChatWidget-CdUBkDOT.js";import{n,t as r}from"./data-jdBmRMed.js";var i=e(),a=t();(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.canada}));
