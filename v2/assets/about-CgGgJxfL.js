@@ -1,1 +1,0 @@
-import{l as e,u as t}from"./navMemory-Cds496Jq.js";import{n}from"./PageApp-DTodugLJ.js";import{t as r}from"./data-lhxTLdOp.js";var i=t(),a=e();(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.about}));
