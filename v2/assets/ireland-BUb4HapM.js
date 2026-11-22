@@ -1,1 +1,0 @@
-import{l as e,u as t}from"./navMemory-BtkoTTDg.js";import{n}from"./PageApp-DWJgR0Md.js";import{t as r}from"./data-KCrbKTFq.js";var i=t(),a=e();window.__HN_PAGE__=`ireland`,(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.ireland}));
