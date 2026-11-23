@@ -1,0 +1,1 @@
+import{l as e,u as t}from"./navMemory-BPGz9KBl.js";import{n}from"./PageApp-C6mSTfRA.js";import{t as r}from"./data-BwXl6Bzt.js";var i=t(),a=e();(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.usa}));
