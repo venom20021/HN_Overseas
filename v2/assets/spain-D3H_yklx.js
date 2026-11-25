@@ -1,0 +1,1 @@
+import{l as e,u as t}from"./navMemory-D3rQ2plE.js";import{n}from"./PageApp-CI0nODaG.js";import{t as r}from"./data-DMAcaX0A.js";var i=t(),a=e();window.__HN_PAGE__=`spain`,(0,i.createRoot)(document.getElementById(`root`)).render((0,a.jsx)(n,{page:r.spain}));
